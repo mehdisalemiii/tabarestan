@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>تماس با ما | پلاستیک سالمی</title>
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- فایل‌های CSS اصلی (مثل صفحه اصلی) -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* تنظیمات سفارشی */
+    body {
+      font-family: "Vazir", sans-serif;
+      margin-top: 80px; /* فاصله به اندازه ارتفاع ناوبار */
+    }
+    /* ناوبار فیکس‌شده */
+    nav.navbar-sticky {
+      position: fixed !important;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+      background-color: #333 !important;
+      margin-bottom: 0 !important;
+    }
+    /* استایل‌های صفحه تماس */
+    .contact-page {
+      padding: 60px 0;
+    }
+    .contact-info-box {
+      background-color: #f9f9f9;
+      border-radius: 4px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .contact-info-box h3 {
+      margin-bottom: 15px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .contact-info-box p {
+      margin-bottom: 10px;
+      line-height: 28px;
+    }
+    .map-container {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+    .contact-form .form-control {
+      margin-bottom: 15px;
+    }
+    .contact-form button {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body data-spy="scroll" data-offset="62">
+
+  <!-- ناوبار (فیکس‌شده) -->
+  <nav id="main-navbar" class="navbar navbar-sticky">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- دکمه منوی موبایل -->
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapse" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!-- لوگو -->
+        <a class="navbar-brand primary-logo" href="index.html">
+          <img src="images/logo.svg" alt="پلاستیک سالمی" style="max-height: 60px;">
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="main-navbar-collapse">
+        <ul class="nav navbar-nav pull-right">
+          <li class="active"><a href="index.html#home">خانه</a></li>
+          <li><a href="index.html#services">خدمات</a></li>
+          <li><a href="index.html#customers">مشتریان ما</a></li>
+          <li><a href="index.html#shop">فروشگاه</a></li>
+          <li><a href="about_us.html">درباره ما</a></li>
+          <li><a href="contact.html">تماس با ما</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- پایان ناوبار -->
+
+  <!-- محتوای صفحه تماس -->
+  <div class="container contact-page">
+    <div class="row text-center">
+      <div class="col-sm-8 col-sm-offset-2">
+        <div class="section-title">
+          <h2 class="section-title-divider primary-divider">تماس با ما</h2>
+          <p>برای دریافت اطلاعات بیشتر یا ثبت سفارش با ما در ارتباط باشید</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <!-- ستون راست: اطلاعات تماس و نقشه -->
+      <div class="col-md-5">
+        <div class="contact-info-box">
+          <h3>دفتر مرکزی:</h3>
+          <p>آدرس: تهران - شهرک صنعتی پرند - بعد از میدان فناوری - جیابان گلزار - خیابان گل آذین - پلاک 23</p>
+          <p>تلفن: ۰۲۱-xxxxxxx<br>موبایل: +98 912 345 6789</p>
+          <p>ایمیل: info@salemiplastic.com</p>
+          <!-- نقشه گوگل (iFrame) -->
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3234.7404901912567!2d51.03279061568694!3d35.51140484537498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e02957c67af5d%3A0xa74c7b148d1c3425!2sParand%20Industrial%20Town!5e0!3m2!1sen!2sir!4v1690386116001" 
+            width="100%" height="300" 
+            style="border:0;" 
+            allowfullscreen="" loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            class="map-container">
+          </iframe>
+        </div>
+      </div>
+      
+      <!-- ستون چپ: فرم تماس -->
+      <div class="col-md-7">
+        <div class="contact-form">
+          <form id="contact-form" class="contact-form" action="inc/function.php" method="post">
+            <div class="row">
+              <div class="col-md-6">
+                <input id="name" class="form-control" name="name" autocomplete="off" placeholder="نام" type="text" required>
+              </div>
+              <div class="col-md-6">
+                <input id="email" class="form-control" name="email" autocomplete="off" placeholder="ایمیل" type="email" required>
+              </div>
+              <div class="col-md-12">
+                <input id="subject" class="form-control" name="subject" autocomplete="off" placeholder="موضوع" type="text" required>
+              </div>
+              <div class="col-md-12">
+                <textarea id="message" class="form-control" rows="5" name="message" placeholder="پیام" required></textarea>
+              </div>
+              <div class="col-md-12">
+                <button type="submit" class="btn btn-default btn-normal">ارسال پیام</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- فوتر (کپی شده از صفحه اصلی) -->
+  <footer class="footer padding-tb-30 primary-section-bg section-typo-white">
+    <div class="container text-center">
+      <div class="row text-center margin-bottom-20">
+        <div class="col-md-12">
+          <ul class="nav navbar-nav footer-social">
+            <li>
+              <a href="#"><img src="images/facebook-icon.png" alt="Facebook" style="width:30px; height:auto;"></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/instagram-icon.png" alt="Instagram" style="width:30px; height:auto;"></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/twitter-icon.png" alt="Twitter" style="width:30px; height:auto;"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-12">
+          <p class="copyright-text">
+            تمامی حقوق محفوظ است © 2025 پلاستیک سالمی
+          </p>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="back-to-top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
+  </footer>
+  
+  <!-- فایل‌های JS -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
