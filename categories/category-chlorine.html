@@ -331,5 +331,10 @@
   </footer>
 
   <script src="../js/bootstrap.bundle.min.js"></script>
+    <script>
+    fetch('../navbar.html')
+      .then(r => r.text())
+      .then(html => document.getElementById('navbar-container').innerHTML = html);
+  </script>
 </body>
 </html>

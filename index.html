@@ -573,6 +573,28 @@ document.querySelectorAll('.faq-question').forEach(function(btn) {
       setTimeout(()=>waBtn.classList.remove('active'), 3500);
     });
   }
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const container = document.getElementById('navbar-container');
+    // از مسیر مطلق استفاده می‌کنیم:
+    fetch('/tabarestan/navbar.html')
+      .then(r => r.text())
+      .then(html => {
+        container.innerHTML = html;
+
+        // هایلایت کردن آیتم فعلی
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('#main-navbar-collapse a').forEach(a => {
+          const href = a.getAttribute('href').split('/').pop();
+          if (href === currentPage) {
+            a.parentElement.classList.add('active');
+          }
+        });
+      })
+      .catch(console.error);
+  });
+</script>
 </script>
 <!-- WhatsApp Floating Button -->
 <a href="https://wa.me/989192389894?text=سلام برای خرید مخزن آب طبرستان راهنمایی می‌خواهم"
