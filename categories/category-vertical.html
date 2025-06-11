@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>مخازن عمودی | نمایندگی طبرستان</title>
+  <meta name="description" content="لیست کامل مخازن آب عمودی طبرستان با مشخصات فنی، ابعاد، حجم‌ها و کاربردها. خرید آنلاین با ارسال فوری.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../images/tabarestan.png" type="image/png">
+
+  <style>
+
+    .specs-table-wrapper {
+    max-width: 1000px;
+    margin: 56px auto;
+    padding: 24px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+    overflow-x: auto;
+  }
+
+  table.specs-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 0.95rem;
+    direction: rtl;
+  }
+
+  .specs-table thead {
+    background: #1551a1;
+    color: #fff;
+  }
+
+  .specs-table th, .specs-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #e3e3e3;
+  }
+
+  .specs-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  .specs-table tr:hover {
+    background-color: #eef5ff;
+  }
+    .section-title {
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #1551a1;
+      margin-top: 56px;
+    }
+
+    .featured-products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+      margin: 32px auto 64px;
+      padding: 0 16px;
+    }
+
+    .product-card-blur {
+      width: 320px;
+      height: 240px;
+      border-radius: 20px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
+      background-image: url('../images/categories/vertical.webp');
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.3s ease;
+    }
+
+        .product-card-blur {
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .product-card-blur:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+        }
+
+    .product-card-blur::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      backdrop-filter: blur(4px);
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    .product-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 100%;
+      padding: 20px;
+      z-index: 2;
+      color: #fff;
+      position: relative;
+    }
+
+    .product-content h4 {
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .product-content p {
+      font-size: 0.95rem;
+      margin: 4px 0;
+    }
+
+    .product-content .btn-tel {
+      margin-top: 10px;
+      background: #fff;
+      color: #1551a1;
+      padding: 7px 16px;
+      border-radius: 25px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .product-card-blur:hover {
+      transform: translateY(-5px);
+    }
+
+    .section-container {
+      padding: 0 16px;
+    }
+
+    table {
+      direction: rtl;
+    }
+
+    body {
+  background: #f9fbff;
+  font-family: "IRANSans", "Vazir", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1551a1;
+  margin: 56px auto 28px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background: #1551a1;
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 3px;
+  opacity: 0.5;
+}
+
+.main-header {
+  background: linear-gradient(145deg, #eaf4ff 0%, #ffffff 100%);
+  padding: 90px 16px 48px;
+  border-bottom: 1px solid #dde6f3;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+}
+
+.cta-wrapper .cta-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(21,81,161,0.12);
+}
+  </style>
+</head>
+<a href="https://wa.me/989192389894?text=سلام برای خرید مخزن آب طبرستان راهنمایی می‌خواهم"
+   class="whatsapp-float" target="_blank" rel="noopener">
+    <img src="../images/social_15707820.png" alt="واتساپ" class="whatsapp-icon">
+    <span class="whatsapp-text">مشاوره فوری واتساپ</span>
+</a>
+<a href="#" class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">
+  <i class="fa fa-chevron-up"></i>
+</a>
+<body>
+  <div id="navbar-container"></div>
+  <script>
+    fetch('../navbar.html')
+      .then(r => r.text())
+      .then(html => {
+        document.getElementById('navbar-container').innerHTML = html;
+        const page = location.pathname.split('/').pop();
+        document.querySelectorAll('#main-navbar .navbar-menu a')
+          .forEach(a => a.getAttribute('href') === page && a.parentElement.classList.add('active'));
+      });
+  </script>
+
+<header class="main-header" style="text-align:center; padding:90px 16px 32px;">
+  <h1 style="font-weight:900; font-size:2rem; color:#1551a1;">مخازن پلی‌اتیلن عمودی طبرستان</h1>
+  <p style="font-size:1.1rem; max-width:780px; margin:12px auto; line-height:1.9; color:#333;">
+    مخازن عمودی طبرستان از محبوب‌ترین گزینه‌ها برای ذخیره آب شرب و مایعات صنعتی هستند. این مخازن با طراحی استوانه‌ای ایستاده، فضای کمی اشغال کرده و با تنوع در حجم (از ۱۰۰ تا ۳۰۰۰۰ لیتر) مناسب مصارف خانگی، کشاورزی و صنعتی می‌باشند. 
+    تمامی مدل‌ها با پلی‌اتیلن درجه‌یک و لایه مقاوم در برابر نور خورشید تولید می‌شوند.
+  </p>
+</header>
+
+  <!-- محصولات پرفروش -->
+  <h2 class="section-title">محصولات پرفروش</h2>
+  <div class="featured-products">
+    <div class="product-card-blur">
+      <div class="product-content">
+        <h4>۵۰۰۰ لیتر آنتی‌باکتریال</h4>
+        <p>ارتفاع: ۲۶۹cm | قطر: ۱۶۳cm</p>
+        <p>کد: 3731482</p>
+        <a class="btn-tel" href="tel:09192389894">سفارش تلفنی</a>
+      </div>
+    </div>
+    <div class="product-card-blur">
+      <div class="product-content">
+        <h4>۲۰۰۰ لیتر تک لایه</h4>
+        <p>ارتفاع: ۱۸۰cm | قطر: ۱۲۵cm</p>
+        <p>کد: 1131320</p>
+        <a class="btn-tel" href="tel:09192389894">سفارش تلفنی</a>
+      </div>
+    </div>
+    <div class="product-card-blur">
+      <div class="product-content">
+        <h4>۱۰۰۰ لیتر سه لایه</h4>
+        <p>ارتفاع: ۱۴۲cm | قطر: ۱۰۵cm</p>
+        <p>کد: 1131351</p>
+        <a class="btn-tel" href="tel:09192389894">سفارش تلفنی</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- جدول مشخصات -->
+<section class="specs-table-wrapper">
+  <h2 class="section-title">مشخصات فنی کامل مخازن عمودی طبرستان</h2>
+  <table class="specs-table">
+    <thead>
+      <tr>
+        <th>نوع</th>
+        <th>کد محصول</th>
+        <th>حجم (لیتر)</th>
+        <th>قطر (cm)</th>
+        <th>ارتفاع کل (cm)</th>
+        <th>ارتفاع سیلندر (cm)</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr><td>عمودی</td><td>1131071</td><td>100</td><td>45</td><td>78</td><td>66</td></tr>
+        <tr><td>عمودی</td><td>1131131</td><td>200</td><td>62</td><td>83</td><td>64</td></tr>
+        <tr><td>عمودی بلند</td><td>3711131</td><td>250</td><td>56</td><td>98</td><td>82</td></tr>
+        <tr><td>عمودی رنگی</td><td>1110153</td><td>220</td><td>58</td><td>97</td><td>85</td></tr>
+        <tr><td>عمودی</td><td>1131151</td><td>220</td><td>58</td><td>97</td><td>85</td></tr>
+        <tr><td>عمودی</td><td>1131161</td><td>250</td><td>70</td><td>82</td><td>63</td></tr>
+        <tr><td>عمودی کوتاه</td><td>1131172</td><td>300</td><td>72</td><td>87</td><td>71</td></tr>
+        <tr><td>عمودی (طرح قدیم)</td><td>1131173</td><td>300</td><td>62</td><td>118</td><td>86</td></tr>
+        <tr><td>عمودی</td><td>1131174</td><td>300</td><td>62</td><td>118</td><td>99</td></tr>
+        <tr><td>عمودی بلند</td><td>3731171</td><td>300</td><td>56</td><td>143</td><td>125</td></tr>
+        <tr><td>عمودی</td><td>1131201</td><td>350</td><td>72</td><td>103</td><td>86</td></tr>
+        <tr><td>عمودی</td><td>1131251</td><td>500</td><td>87</td><td>106</td><td>86</td></tr>
+        <tr><td>عمودی بلند</td><td>3731252</td><td>500</td><td>66</td><td>164</td><td>145</td></tr>
+        <tr><td>عمودی</td><td>1131321</td><td>800</td><td>94</td><td>138</td><td>108</td></tr>
+        <tr><td>عمودی بلند</td><td>3731322</td><td>800</td><td>78</td><td>189</td><td>166</td></tr>
+        <tr><td>عمودی کوتاه</td><td>1231351</td><td>1000</td><td>114</td><td>114</td><td>86</td></tr>
+        <tr><td>عمودی کوتاه (درب ۵۰)</td><td>1231355</td><td>1000</td><td>111</td><td>119</td><td>85</td></tr>
+        <tr><td>عمودی</td><td>1131351</td><td>1000</td><td>105</td><td>142</td><td>117</td></tr>
+        <tr><td>عمودی (درب ۵۰)</td><td>1131352</td><td>1000</td><td>105</td><td>142</td><td>117</td></tr>
+        <tr><td>عمودی بلند</td><td>3731352</td><td>1000</td><td>80</td><td>220</td><td>197</td></tr>
+        <tr><td>عمودی کوتاه</td><td>1131431</td><td>2500</td><td>170</td><td>130</td><td>100</td></tr>
+        <tr><td>عمودی</td><td>1131430</td><td>2500</td><td>138</td><td>188</td><td>160</td></tr>
+        <tr><td>عمودی کوتاه</td><td>1231446</td><td>2500</td><td>175</td><td>144</td><td>114.5</td></tr>
+        <tr><td>عمودی</td><td>1131441</td><td>3000</td><td>153</td><td>200</td><td>168</td></tr>
+        <tr><td>عمودی بلند</td><td>3731442</td><td>3000</td><td>132</td><td>250</td><td>220</td></tr>
+        <tr><td>عمودی کوتاه</td><td>1231461</td><td>4000</td><td>203</td><td>150</td><td>115</td></tr>
+        <tr><td>عمودی</td><td>1131461</td><td>4000</td><td>177</td><td>195</td><td>156</td></tr>
+        <tr><td>عمودی بلند</td><td>3731462</td><td>4000</td><td>155</td><td>241</td><td>205</td></tr>
+        <tr><td>عمودی کوتاه</td><td>1231481</td><td>5000</td><td>219</td><td>160</td><td>120</td></tr>
+        <tr><td>عمودی</td><td>1131481</td><td>5000</td><td>185</td><td>221</td><td>180</td></tr>
+        <tr><td>عمودی بلند</td><td>3731482</td><td>5000</td><td>163</td><td>269</td><td>234</td></tr>
+        <tr><td>عمودی کوتاه</td><td>1231501</td><td>6000</td><td>228</td><td>174</td><td>134</td></tr>
+        <tr><td>عمودی</td><td>1131501</td><td>6000</td><td>190</td><td>239</td><td>206</td></tr>
+        <tr><td>عمودی</td><td>1131521</td><td>7000</td><td>201</td><td>281</td><td>239</td></tr>
+        <tr><td>عمودی</td><td>1131541</td><td>8000</td><td>201</td><td>281</td><td>239</td></tr>
+        <tr><td>عمودی کوتاه</td><td>1231571</td><td>10000</td><td>263</td><td>210</td><td>166</td></tr>
+        <tr><td>عمودی</td><td>1131572</td><td>10000</td><td>230</td><td>272</td><td>235</td></tr>
+        <tr><td>عمودی بلند</td><td>3731571</td><td>10000</td><td>204</td><td>335</td><td>296</td></tr>
+        <tr><td>عمودی</td><td>1131581</td><td>12000</td><td>232</td><td>311</td><td>272</td></tr>
+        <tr><td>عمودی کوتاه</td><td>1231591</td><td>14000</td><td>202</td><td>231</td><td>175</td></tr>
+        <tr><td>عمودی</td><td>1131601</td><td>15000</td><td>255</td><td>335</td><td>283</td></tr>
+        <tr><td>عمودی</td><td>1131621</td><td>20000</td><td>305</td><td>307</td><td>259</td></tr>
+        <tr><td>عمودی بلند</td><td>1131623</td><td>20000</td><td>260</td><td>409</td><td>366</td></tr>
+        <tr><td>عمودی</td><td>1131631</td><td>25000</td><td>302.5</td><td>380</td><td>333</td></tr>
+        <tr><td>عمودی</td><td>1131642</td><td>30000</td><td>302.5</td><td>453</td><td>405</td></tr>
+        <tr><td>عمودی بلند</td><td>110660</td><td>30000</td><td>358</td><td>437</td><td>380</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+
+<section class="cta-wrapper" style="margin: 48px auto 24px; text-align: center;">
+  <div style="max-width: 600px; margin: auto; padding: 32px 24px; border-radius: 20px; background: #f2f7ff; box-shadow: 0 4px 20px rgba(21, 81, 161, 0.1);">
+    <h3 style="font-weight:800; font-size: 1.3rem; color:#1551a1; margin-bottom: 18px;">نیاز به مشاوره دارید؟</h3>
+    <p style="margin-bottom: 28px; font-size: 1rem; color:#444;">کارشناسان ما آماده پاسخ‌گویی و راهنمایی برای انتخاب بهترین مخزن آب متناسب با نیاز شما هستند.</p>
+    
+    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+      <a href="tel:09192389894" class="cta-btn" style="
+          background: #1551a1;
+          color: #fff;
+          padding: 10px 22px;
+          border-radius: 30px;
+          font-size: 1rem;
+          font-weight: bold;
+          text-decoration: none;
+          transition: background 0.3s ease;
+      ">📞 مشاوره تلفنی فوری</a>
+
+      <a href="../shop.html" class="cta-btn" style="
+          background: #eaeaea;
+          color: #333;
+          padding: 10px 22px;
+          border-radius: 30px;
+          font-size: 1rem;
+          font-weight: bold;
+          text-decoration: none;
+          transition: background 0.3s ease;
+      ">🔙 بازگشت به فروشگاه</a>
+    </div>
+  </div>
+</section>
+  </main>
+
+<section class="section-container" style="margin-top: 12px;">
+  <div style="max-width: 800px; margin:auto; background:#f9f9f9; padding:40px 24px; border-radius:18px; box-shadow:0 8px 28px rgba(0,0,0,0.06);">
+    <h2 class="section-title" style="text-align:center; font-weight:800; font-size:1.6rem; color:#1551a1; margin-bottom:32px;">سوالات متداول درباره مخازن عمودی طبرستان</h2>
+
+    <details style="margin-bottom: 18px; border-bottom:1px solid #ddd; padding-bottom:12px;">
+      <summary style="font-weight: bold; font-size:1.05rem; cursor: pointer; color:#333;">مخازن آب عمودی طبرستان برای چه کاربردهایی مناسب هستند؟</summary>
+      <p style="margin-top: 10px; font-size: 0.95rem;">این مخازن به‌دلیل طراحی ایستاده برای فضاهای محدود در خانه‌ها، باغ‌ها، کارگاه‌ها و واحدهای صنعتی بسیار مناسب هستند. با تنوع حجم از ۱۰۰ تا ۳۰۰۰۰ لیتر، برای تمام کاربردها گزینه‌ای وجود دارد.</p>
+    </details>
+
+    <details style="margin-bottom: 18px; border-bottom:1px solid #ddd; padding-bottom:12px;">
+      <summary style="font-weight: bold; font-size:1.05rem; cursor: pointer; color:#333;">تفاوت بین مخازن تک‌لایه، سه‌لایه و آنتی‌باکتریال چیست؟</summary>
+      <p style="margin-top: 10px; font-size: 0.95rem;">مخازن تک‌لایه اقتصادی‌تر هستند ولی نور را عبور می‌دهند. سه‌لایه‌ها از رشد جلبک جلوگیری می‌کنند و آنتی‌باکتریال‌ها با افزودنی‌های خاص، بهترین گزینه برای نگهداری آب شرب هستند.</p>
+    </details>
+
+    <details style="margin-bottom: 18px; border-bottom:1px solid #ddd; padding-bottom:12px;">
+      <summary style="font-weight: bold; font-size:1.05rem; cursor: pointer; color:#333;">آیا مخازن عمودی طبرستان دارای تاییدیه بهداشت هستند؟</summary>
+      <p style="margin-top: 10px; font-size: 0.95rem;">بله، کلیه محصولات طبرستان از پلی‌اتیلن بهداشتی تولید شده‌اند و دارای مجوز سازمان غذا و دارو برای نگهداری آب شرب می‌باشند.</p>
+    </details>
+
+    <details style="margin-bottom: 18px; border-bottom:1px solid #ddd; padding-bottom:12px;">
+      <summary style="font-weight: bold; font-size:1.05rem; cursor: pointer; color:#333;">کدام حجم از مخزن برای مصارف خانگی مناسب‌تر است؟</summary>
+      <p style="margin-top: 10px; font-size: 0.95rem;">برای خانه‌های تک‌واحدی معمولاً مخازن ۱۰۰۰ تا ۲۰۰۰ لیتری توصیه می‌شوند. برای ویلاها و خانه‌های چندواحدی مخازن ۳۰۰۰ تا ۵۰۰۰ لیتری انتخاب بهتری هستند.</p>
+    </details>
+
+    <details style="margin-bottom: 0;">
+      <summary style="font-weight: bold; font-size:1.05rem; cursor: pointer; color:#333;">آیا امکان ارسال مخازن به سراسر کشور وجود دارد؟</summary>
+      <p style="margin-top: 10px; font-size: 0.95rem;">بله، ارسال تمام مخازن با باربری مطمئن به تمام استان‌ها و شهرستان‌ها انجام می‌شود. سفارش‌ها به‌صورت مستقیم از انبار کارخانه یا نمایندگی ارسال می‌گردند.</p>
+    </details>
+  </div>
+</section>
+  <footer>
+    <div style="font-size:1.12rem; margin-bottom:13px;">
+      نمایندگی رسمی فروش مخازن آب طبرستان در پرند، رباط کریم و تهران
+    </div>
+    <ul class="social-icons">
+      <li><a href="#" title="اینستاگرام"><i class="fa fa-instagram"></i></a></li>
+      <li><a href="https://wa.me/989192389894" title="واتساپ"><i class="fa fa-whatsapp"></i></a></li>
+      <li><a href="#" title="تلگرام"><i class="fa fa-telegram"></i></a></li>
+    </ul>
+    <div style="font-size:.97rem;">
+      © طراحی و سئو اختصاصی سایت توسط نمایندگی | هرگونه کپی‌برداری پیگرد قانونی دارد<br>
+      <b>تماس: <a href="tel:09192389894" style="color:#f9f;">09192389894</a></b>
+    </div>
+  </footer>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

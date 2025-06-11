@@ -1,0 +1,113 @@
+/* اندازه کارت: 90mm x 50mm (با حاشیه برش) */
+@page {
+  size: 90mm 50mm;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Vazir', sans-serif;
+  direction: rtl;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 90mm;
+  height: 50mm;
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+}
+
+/* طیف آبی طبرستان */
+:root {
+  --blue-light: #4A90E2;
+  --blue-dark:  #005B9F;
+  --white:      #ffffff;
+  --gray-light:#F0F0F0;
+  --gray-text: #555555;
+}
+
+/* لوگو */
+.logo {
+  display: block;
+  margin: 12px auto 8px;
+  max-height: 12mm;
+}
+
+/* تیتر */
+.title {
+  text-align: center;
+  font-size: 4.5mm;
+  color: var(--white);
+  margin: 4px 0;
+}
+
+/* تصویر مخازن */
+.tanks {
+  display: block;
+  width: auto;
+  height: 20mm;
+  margin: 4px auto;
+}
+
+/* فوتر روی کارت */
+.footer {
+  position: absolute;
+  bottom: 4mm;
+  width: 100%;
+  text-align: center;
+  font-size: 3mm;
+  color: var(--white);
+  line-height: 1.2;
+}
+
+/* QR و تماس */
+.contact-item {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 3mm;
+  color: var(--white);
+  margin: 0 2mm;
+}
+.contact-item img {
+  height: 16mm;
+  margin-bottom: -2mm;
+}
+
+/* پشت کارت */
+.back {
+  background: var(--white);
+  padding: 4mm;
+  font-size: 3mm;
+  color: var(--gray-text);
+}
+
+.back h2 {
+  margin: 0 0 2mm;
+  font-size: 5mm;
+  color: var(--blue-dark);
+}
+
+.back .info {
+  line-height: 1.4;
+  margin-bottom: 4mm;
+}
+
+.back .notes {
+  border-top: 1px dashed var(--gray-light);
+  padding-top: 2mm;
+  height: 18mm;
+  position: relative;
+}
+.back .notes::before {
+  content: '';
+  position: absolute;
+  top: 2mm; left: 4mm;
+  right: 4mm; bottom: 2mm;
+  background-size: 5mm 5mm;
+  background-image:
+    linear-gradient(var(--gray-light) 1px, transparent 1px),
+    linear-gradient(90deg, var(--gray-light) 1px, transparent 1px);
+  background-repeat: repeat;
+}

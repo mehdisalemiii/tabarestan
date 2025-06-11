@@ -1,215 +1,158 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="fa">
+<html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>درباره ما | پلاستیک سالمی</title>
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <title>درباره ما | نمایندگی طبرستان</title>
+  <meta name="description" content="نمایندگی رسمی فروش مخازن آب طبرستان: تاریخچه، اهداف، و تیم مجرب ما را بشناسید. بهترین کیفیت با تضمین خدمات پس از فروش.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- توضیحات متا -->
-  <meta name="description" content="درباره ما - پلاستیک سالمی">
-  <meta name="author" content="پلاستیک سالمی">
-  
-  <!-- فایل‌های CSS -->
+  <!-- CSS های مشترک -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link href="https://cdn.fontcdn.ir/Fonts/fontiran.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  
+    <link rel="icon" href="images/tabarestan.png">
+
   <style>
-    /* فاصله از بالا برای جلوگیری از پوشش ناوبار ثابت */
-    body {
-      margin-top: 70px;
-    }
-    /* هدر درباره ما */
-    header#about-header {
-      background-image: url('images/realistic image of a plastic injection factory.png'); /* مسیر تصویر پس‌زمینه را بررسی کنید */
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      height: 60vh;
-      position: relative;
+    /* هدر صفحه */
+    .about-header {
+      background: #1551a1 url('images/about-bg.jpg') center/cover no-repeat;
       color: #fff;
-    }
-    header#about-header .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-    header#about-header .header-content {
-      position: relative;
-      z-index: 2;
       text-align: center;
-      top: 50%;
-      transform: translateY(-50%);
+      padding: 80px 20px;
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     }
-    header#about-header .header-content h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
+    .about-header h1 {
+      font-size: 2.6rem;
+      font-weight: 900;
+      margin-bottom: 12px;
     }
-    header#about-header .header-content p {
-      font-size: 20px;
+    .about-header p {
+      font-size: 1.2rem;
+      opacity: .9;
+      max-width: 720px;
+      margin: 0 auto;
     }
-    
-    /* بخش درباره ما */
-    .about-section {
-      padding: 60px 0;
+    /* بخش معرفی */
+    .team-section {
+      padding: 60px 20px;
     }
-    .about-section .section-title {
-      margin-bottom: 40px;
+    .team-section h2 {
+      font-size: 2rem;
+      margin-bottom: 24px;
       text-align: center;
     }
-    .about-content {
-      font-size: 16px;
-      line-height: 28px;
-      margin-bottom: 30px;
+    .team-cards .card {
+      border: none;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+      transition: transform .2s;
     }
-    .certificates {
-      margin-top: 40px;
+    .team-cards .card:hover {
+      transform: translateY(-6px);
+    }
+    .team-cards .card img {
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+    }
+    .team-cards .card-body {
       text-align: center;
     }
-    .certificate {
-      display: inline-block;
-      margin: 10px;
+    .team-cards .card-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-top: 10px;
     }
-    .certificate img {
-      max-width: 150px;
-      height: auto;
-      display: block;
-      margin: 0 auto 10px;
+    .team-cards .card-text {
+      font-size: .95rem;
+      color: #555;
     }
   </style>
 </head>
-<body data-spy="scroll" data-offset="62">
-  
-  <!-- ناوبار (کپی شده از صفحه اصلی) -->
-  <nav id="main-navbar" class="navbar navbar-sticky" style="background-color: #333;">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapse" aria-expanded="false">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand primary-logo" href="index.html#home">
-          <img src="images/logo.svg" alt="پلاستیک سالمی" style="max-height: 60px;">
-        </a>
-      </div>
-      <div class="collapse navbar-collapse" id="main-navbar-collapse">
-        <ul class="nav navbar-nav pull-right">
-          <li><a href="index.html#home">خانه</a></li>
-          <li><a href="index.html#services">خدمات</a></li>
-          <li><a href="index.html#customers">مشتریان ما</a></li>
-          <li><a href="index.html#shop">فروشگاه</a></li>
-          <li class="active"><a href="about_us.html">درباره ما</a></li>
-          <li><a href="contact.html">تماس با ما</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- پایان ناوبار -->
-  
-  <!-- هدر درباره ما -->
-  <header id="about-header">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="header-content">
-        <h1>درباره ما</h1>
-        <p>آشنایی با شرکت پلاستیک سالمی و دستاوردهای آن</p>
-      </div>
-    </div>
+<a href="https://wa.me/989192389894?text=سلام برای خرید مخزن آب طبرستان راهنمایی می‌خواهم"
+   class="whatsapp-float" target="_blank" rel="noopener">
+    <img src="images/social_15707820.png" alt="واتساپ" class="whatsapp-icon">
+    <span class="whatsapp-text">مشاوره فوری واتساپ</span>
+</a>
+<a href="#" class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">
+  <i class="fa fa-chevron-up"></i>
+</a>
+<body>
+
+  <!-- Navbar -->
+  <div id="navbar-container"></div>
+  <script>
+    fetch('navbar.html')
+      .then(r => r.text())
+      .then(html => {
+        document.getElementById('navbar-container').innerHTML = html;
+        const page = location.pathname.split('/').pop();
+        document.querySelectorAll('#main-navbar .navbar-menu a')
+          .forEach(a => {
+            if (a.getAttribute('href') === page) 
+              a.parentElement.classList.add('active');
+          });
+      });
+  </script>
+
+  <!-- Header -->
+  <header class="about-header">
+    <h1>ما کی هستیم؟</h1>
+    <p>
+      نمایندگی رسمی مخازن آب طبرستان بیش از ۱۰ سال سابقه در تأمین و ارائه بهترین مخازن پلی‌اتیلن صنعتی و شهری دارد.
+      با تکیه بر کیفیت برتر تولیدات و پشتیبانی تخصصی، همراه همیشگی پروژه‌های شما هستیم.
+    </p>
   </header>
-  
-  <!-- سکشن اصلی درباره ما -->
-  <section id="about_us" class="about-section">
-    <div class="container">
-      <div class="row text-center">
-        <div class="col-sm-10 col-sm-offset-1">
-          <h2 class="section-title-divider primary-divider">درباره ما</h2>
-          <p>با شرکت پلاستیک سالمی آشنا شوید</p>
-        </div>
-      </div>
-      
-      <div class="row">
-        <!-- معرفی شرکت -->
-        <div class="col-md-6">
-          <div class="about-content">
-            <h3>معرفی شرکت</h3>
-            <p>
-              شرکت پلاستیک سالمی با بیش از 20 سال سابقه در صنعت تزریق پلاستیک، یکی از پیشروان این حوزه است.
-              ما با بهره‌گیری از تکنولوژی روز دنیا و تیمی متخصص، خدمات مشاوره، طراحی قالب و تولید قطعات پلاستیکی را ارائه می‌دهیم.
-            </p>
-            <p>
-              مأموریت ما ارائه محصولات باکیفیت، نوآوری در فرآیندهای تولید و حفظ محیط زیست از طریق استفاده از فناوری‌های مدرن است.
-            </p>
-          </div>
-        </div>
-        
-        <!-- گواهینامه‌ها -->
-        <div class="col-md-6">
-          <div class="about-content">
-            <h3>گواهینامه‌های بین‌المللی</h3>
-            <p>
-              شرکت پلاستیک سالمی دارای گواهینامه‌های بین‌المللی معتبری مانند ISO 9001 و ISO 14001 می‌باشد.
-              این گواهینامه‌ها نشان‌دهنده تعهد ما به کیفیت، بهبود مستمر و رعایت استانداردهای زیست محیطی است.
-            </p>
-          </div>
-          <div class="certificates">
-            <div class="certificate">
-              <img src="images/iso9001.png" alt="گواهینامه ISO 9001">
-              <p>گواهینامه ISO 9001</p>
-            </div>
-            <div class="certificate">
-              <img src="images/iso14001.png" alt="گواهینامه ISO 14001">
-              <p>گواهینامه ISO 14001</p>
-            </div>
+
+  <!-- بخش تیم ما -->
+  <main class="container team-section">
+    <h2>تیم ما</h2>
+    <div class="row team-cards">
+      <!-- کارت عضوی از تیم -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="images/team1.jpg" class="card-img-top" alt="مدیرعامل">
+          <div class="card-body">
+            <h5 class="card-title">آقای احمد سالمی</h5>
+            <p class="card-text">مدیرعامل و مؤسس نمایندگی طبرستان با بیش از ۱۵ سال تجربه در صنعت آب و محیط‌زیست.</p>
           </div>
         </div>
       </div>
-      
-      <!-- تاریخچه شرکت -->
-      <div class="row" style="margin-top:40px;">
-        <div class="col-md-12">
-          <div class="about-content">
-            <h3>تاریخچه شرکت</h3>
-            <p>
-              شرکت پلاستیک سالمی از سال 1380 فعالیت خود را آغاز کرد و همواره در پی نوآوری و بهبود فرآیندهای تولید بوده است.
-              طی این سال‌ها، با بهره‌گیری از تکنولوژی‌های مدرن و تیم مجرب، موفق به کسب افتخارات و گواهینامه‌های بین‌المللی شده‌ایم.
-            </p>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="images/team2.jpg" class="card-img-top" alt="مدیر فروش">
+          <div class="card-body">
+            <h5 class="card-title">خانم سارا رضایی</h5>
+            <p class="card-text">مدیر فروش و بازاریابی با تخصص در بهبود تجربه مشتری و راهکارهای B2B.</p>
           </div>
         </div>
       </div>
-      
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="images/team3.jpg" class="card-img-top" alt="پشتیبانی">
+          <div class="card-body">
+            <h5 class="card-title">آقای فرزاد عباسی</h5>
+            <p class="card-text">مسئول خدمات پس از فروش و پشتیبانی فنی با پاسخگویی ۲۴/۷.</p>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
-  
-  <!-- فوتر (کپی شده از صفحه اصلی) -->
-  <footer class="footer padding-tb-30 primary-section-bg section-typo-white">
-    <div class="container text-center">
-      <p>© 2025 پلاستیک سالمی. تمامی حقوق محفوظ است.</p>
-      <ul class="nav navbar-nav footer-social">
-        <li><a href="#"><img src="images/facebook-icon.png" alt="Facebook" style="width:30px; height:auto;"></a></li>
-        <li><a href="#"><img src="images/instagram-icon.png" alt="Instagram" style="width:30px; height:auto;"></a></li>
-        <li><a href="#"><img src="images/twitter-icon.png" alt="Twitter" style="width:30px; height:auto;"></a></li>
-      </ul>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div>نمایندگی رسمی فروش مخازن آب طبرستان در پرند، رباط کریم و تهران</div>
+    <ul class="social-icons">
+      <li><a href="#" title="اینستاگرام"><i class="fa fa-instagram"></i></a></li>
+      <li><a href="https://wa.me/989192389894" title="واتساپ"><i class="fa fa-whatsapp"></i></a></li>
+      <li><a href="#" title="تلگرام"><i class="fa fa-telegram"></i></a></li>
+    </ul>
+    <div>
+      © طراحی و سئو اختصاصی سایت توسط نمایندگی | هرگونه کپی‌برداری پیگرد قانونی دارد<br>
+      <b>تماس: <a href="tel:09192389894">09192389894</a></b>
     </div>
-    <a href="#" class="back-to-top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
   </footer>
-  
-  <!-- فایل‌های JS -->
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.appear.js"></script>
-  <script src="js/jquery.easing.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/jquery.counterup.min.js"></script>
-  <script src="js/isotope.pkgd.min.js"></script>
-  <script src="js/lightbox.min.js"></script>
-  <script src="js/jquery.mb.YTPlayer.min.js"></script>
-  <script src="js/validator.min.js"></script>
-  <script src="js/theme.js"></script>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

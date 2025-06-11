@@ -1,0 +1,30 @@
+<svg width="340" height="145" viewBox="0 0 340 145" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- بیضی اصلی با سایه -->
+  <ellipse cx="170" cy="67" rx="135" ry="54" fill="#fff" />
+  <ellipse cx="170" cy="67" rx="128" ry="49" fill="none" stroke="#184075" stroke-width="5" opacity="0.95" />
+  <!-- خط بیرونی با رنگ مکمل -->
+  <ellipse cx="170" cy="67" rx="120" ry="42" fill="none" stroke="#23a124" stroke-width="2" opacity="0.23" />
+  <!-- خطوط آب (موجی) برای هویت آبی -->
+  <path d="M70 100 Q120 120 170 108 Q220 97 270 100" stroke="#23a124" stroke-width="2" fill="none" opacity="0.18"/>
+  <!-- نماد T.P.C وسط لوگو -->
+  <text x="50%" y="76" text-anchor="middle" fill="#184075"
+        font-size="44" font-family="Arial Black, Vazirmatn, Arial" font-weight="bold" letter-spacing="8">
+    &lt;T.P.C&gt;
+  </text>
+  <!-- خط گرادینت زیر نوشته -->
+  <defs>
+    <linearGradient id="gLine" x1="100" y1="96" x2="240" y2="96" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#23a124"/>
+      <stop offset="1" stop-color="#184075"/>
+    </linearGradient>
+  </defs>
+  <rect x="108" y="98" width="124" height="5" rx="2.5" fill="url(#gLine)" />
+  <!-- دایره‌های آب‌رنگی ملایم برای جذابیت بیشتر -->
+  <circle cx="105" cy="62" r="7" fill="#e3f0fd" opacity="0.44"/>
+  <circle cx="230" cy="56" r="4" fill="#d6fce7" opacity="0.35"/>
+  <!-- متن فارسی با تناسب وسط لوگو -->
+  <text x="50%" y="133" text-anchor="middle" fill="#22ba63"
+        font-size="22" font-family="Vazirmatn, Arial" font-weight="bold" letter-spacing="0">
+    نمایندگی رسمی طبرستان
+  </text>
+</svg>

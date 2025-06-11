@@ -1,186 +1,172 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="fa">
+<html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>تماس با ما | پلاستیک سالمی</title>
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <title>تماس با ما | نمایندگی طبرستان</title>
+  <meta name="description" content="برای مشاوره و سفارش مخازن پلی‌اتیلن طبرستان با ما تماس بگیرید. نمایندگی رسمی، ارسال سریع، مشاوره تخصصی.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- فایل‌های CSS اصلی (مثل صفحه اصلی) -->
+  <!-- CSS -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link href="https://cdn.fontcdn.ir/Fonts/fontiran.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/tabarestan.png" type="image/png" />
 
   <style>
-    /* تنظیمات سفارشی */
-    body {
-      font-family: "Vazir", sans-serif;
-      margin-top: 80px; /* فاصله به اندازه ارتفاع ناوبار */
+    body { background:#f6f9fb; color:#222d3a; }
+    .main-header {
+      background: linear-gradient(110deg,#234080 70%,#24589b 100%);
+      color:#fff; padding:56px 0; text-align:center; border-radius:0 0 30px;
+      box-shadow: 0 12px 36px rgba(25,77,146,0.07);
     }
-    /* ناوبار فیکس‌شده */
-    nav.navbar-sticky {
-      position: fixed !important;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 9999;
-      background-color: #333 !important;
-      margin-bottom: 0 !important;
+    .main-header h1 { font-size:2.4rem; margin-bottom:12px; font-weight:900; }
+    .main-header p  { font-size:1.28rem; opacity:.9; }
+
+    .contact-card {
+      max-width:700px; margin:-40px auto 60px; background:#fff; padding:36px 28px;
+      border-radius:20px; box-shadow:0 10px 30px rgba(52,85,149,0.08);
     }
-    /* استایل‌های صفحه تماس */
-    .contact-page {
-      padding: 60px 0;
+    .contact-card label { font-weight:600; }
+    .contact-info { margin-bottom:20px; }
+    .contact-info i { margin-left:8px; color:#1551a1; }
+
+    .btn-submit {
+      background:#1551a1; color:#fff; border:none;
+      padding:12px 28px; border-radius:25px;
+      font-size:1.08rem; font-weight:600;
+      transition:background .2s;
     }
-    .contact-info-box {
-      background-color: #f9f9f9;
-      border-radius: 4px;
-      padding: 20px;
-      margin-bottom: 20px;
-    }
-    .contact-info-box h3 {
-      margin-bottom: 15px;
-      font-size: 18px;
-      font-weight: 600;
-    }
-    .contact-info-box p {
-      margin-bottom: 10px;
-      line-height: 28px;
-    }
-    .map-container {
-      width: 100%;
-      height: 300px;
-      border: 0;
-      border-radius: 4px;
-      margin-top: 10px;
-    }
-    .contact-form .form-control {
-      margin-bottom: 15px;
-    }
-    .contact-form button {
-      margin-top: 10px;
-    }
+    .btn-submit:hover { background:#187917; }
   </style>
 </head>
-<body data-spy="scroll" data-offset="62">
 
-  <!-- ناوبار (فیکس‌شده) -->
-  <nav id="main-navbar" class="navbar navbar-sticky">
-    <div class="container">
-      <div class="navbar-header">
-        <!-- دکمه منوی موبایل -->
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapse" aria-expanded="false">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <!-- لوگو -->
-        <a class="navbar-brand primary-logo" href="index.html">
-          <img src="images/logo.svg" alt="پلاستیک سالمی" style="max-height: 60px;">
-        </a>
-      </div>
-      <div class="collapse navbar-collapse" id="main-navbar-collapse">
-        <ul class="nav navbar-nav pull-right">
-          <li class="active"><a href="index.html#home">خانه</a></li>
-          <li><a href="index.html#services">خدمات</a></li>
-          <li><a href="index.html#customers">مشتریان ما</a></li>
-          <li><a href="index.html#shop">فروشگاه</a></li>
-          <li><a href="about_us.html">درباره ما</a></li>
-          <li><a href="contact.html">تماس با ما</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <!-- پایان ناوبار -->
+<body>
 
-  <!-- محتوای صفحه تماس -->
-  <div class="container contact-page">
-    <div class="row text-center">
-      <div class="col-sm-8 col-sm-offset-2">
-        <div class="section-title">
-          <h2 class="section-title-divider primary-divider">تماس با ما</h2>
-          <p>برای دریافت اطلاعات بیشتر یا ثبت سفارش با ما در ارتباط باشید</p>
-        </div>
-      </div>
+<!-- دکمه واتساپ -->
+<a href="https://wa.me/989192389894?text=سلام برای خرید مخزن آب طبرستان راهنمایی می‌خواهم"
+   class="whatsapp-float" target="_blank" rel="noopener">
+  <img src="images/social_15707820.png" alt="واتساپ" class="whatsapp-icon">
+  <span class="whatsapp-text">مشاوره فوری واتساپ</span>
+</a>
+
+<!-- دکمه بازگشت به بالا -->
+<a href="#" class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">
+  <i class="fa fa-chevron-up"></i>
+</a>
+
+<!-- Navbar -->
+<div id="navbar-container"></div>
+<script>
+  fetch('navbar.html')
+    .then(r => r.text())
+    .then(html => {
+      document.getElementById('navbar-container').innerHTML = html;
+      const page = location.pathname.split('/').pop();
+      document.querySelectorAll('#main-navbar .navbar-menu a')
+        .forEach(a => {
+          if (a.getAttribute('href') === page) a.parentElement.classList.add('active');
+        });
+    });
+</script>
+
+<!-- Header -->
+<header class="main-header">
+  <h1>تماس با نمایندگی طبرستان</h1>
+  <p>مشاوره تخصصی و پاسخگویی سریع به سؤالات شما</p>
+</header>
+
+<!-- فرم تماس -->
+<main class="container">
+  <section class="contact-card" itemscope itemtype="https://schema.org/LocalBusiness">
+    <h2>راه‌های ارتباطی</h2>
+    <div class="contact-info">
+      <p><i class="fa fa-phone"></i> <span itemprop="telephone">09192389894</span> (سالمی)</p>
+      <p><i class="fa fa-envelope"></i>
+        <a href="mailto:info@tpciran.com" itemprop="email">info@tpciran.com</a>
+      </p>
+      <p><i class="fa fa-map-marker"></i>
+        <span itemprop="address">تهران، خیابان انقلاب، پلاک ۱۲۳</span>
+      </p>
     </div>
-    
-    <div class="row">
-      <!-- ستون راست: اطلاعات تماس و نقشه -->
-      <div class="col-md-5">
-        <div class="contact-info-box">
-          <h3>دفتر مرکزی:</h3>
-          <p>آدرس: تهران - شهرک صنعتی پرند - بعد از میدان فناوری - جیابان گلزار - خیابان گل آذین - پلاک 23</p>
-          <p>تلفن: ۰۲۱-xxxxxxx<br>موبایل: +98 912 345 6789</p>
-          <p>ایمیل: info@salemiplastic.com</p>
-          <!-- نقشه گوگل (iFrame) -->
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3234.7404901912567!2d51.03279061568694!3d35.51140484537498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e02957c67af5d%3A0xa74c7b148d1c3425!2sParand%20Industrial%20Town!5e0!3m2!1sen!2sir!4v1690386116001" 
-            width="100%" height="300" 
-            style="border:0;" 
-            allowfullscreen="" loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade"
-            class="map-container">
-          </iframe>
-        </div>
-      </div>
-      
-      <!-- ستون چپ: فرم تماس -->
-      <div class="col-md-7">
-        <div class="contact-form">
-          <form id="contact-form" class="contact-form" action="inc/function.php" method="post">
-            <div class="row">
-              <div class="col-md-6">
-                <input id="name" class="form-control" name="name" autocomplete="off" placeholder="نام" type="text" required>
-              </div>
-              <div class="col-md-6">
-                <input id="email" class="form-control" name="email" autocomplete="off" placeholder="ایمیل" type="email" required>
-              </div>
-              <div class="col-md-12">
-                <input id="subject" class="form-control" name="subject" autocomplete="off" placeholder="موضوع" type="text" required>
-              </div>
-              <div class="col-md-12">
-                <textarea id="message" class="form-control" rows="5" name="message" placeholder="پیام" required></textarea>
-              </div>
-              <div class="col-md-12">
-                <button type="submit" class="btn btn-default btn-normal">ارسال پیام</button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
+
+    <h2>ارسال پیام</h2>
+<form id="contact-form" action="#" method="post">
+  <div class="form-group">
+    <label for="name">نام و نام خانوادگی</label>
+    <input type="text" id="name" name="name" class="form-control" required>
   </div>
-  
-  <!-- فوتر (کپی شده از صفحه اصلی) -->
-  <footer class="footer padding-tb-30 primary-section-bg section-typo-white">
-    <div class="container text-center">
-      <div class="row text-center margin-bottom-20">
-        <div class="col-md-12">
-          <ul class="nav navbar-nav footer-social">
-            <li>
-              <a href="#"><img src="images/facebook-icon.png" alt="Facebook" style="width:30px; height:auto;"></a>
-            </li>
-            <li>
-              <a href="#"><img src="images/instagram-icon.png" alt="Instagram" style="width:30px; height:auto;"></a>
-            </li>
-            <li>
-              <a href="#"><img src="images/twitter-icon.png" alt="Twitter" style="width:30px; height:auto;"></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="row text-center">
-        <div class="col-md-12">
-          <p class="copyright-text">
-            تمامی حقوق محفوظ است © 2025 پلاستیک سالمی
-          </p>
-        </div>
-      </div>
-    </div>
-    <a href="#" class="back-to-top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
-  </footer>
-  
-  <!-- فایل‌های JS -->
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <div class="form-group">
+    <label for="email">ایمیل</label>
+    <input type="email" id="email" name="email" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label for="phone">شماره تماس</label>
+    <input type="tel" id="phone" name="phone" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label for="message">متن پیام</label>
+    <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+  </div>
+  <button type="submit" class="btn-submit">ارسال پیام</button>
+</form>
+
+
+<!-- فوتر -->
+<footer>
+  <div style="font-size:1.12rem; margin-bottom:13px;">
+    نمایندگی رسمی فروش مخازن آب طبرستان در پرند، رباط کریم و تهران
+  </div>
+  <ul class="social-icons">
+    <li><a href="#" title="اینستاگرام"><i class="fa fa-instagram"></i></a></li>
+    <li><a href="https://wa.me/989192389894" target="_blank" rel="noopener" title="واتساپ"><i class="fa fa-whatsapp"></i></a></li>
+    <li><a href="#" title="تلگرام"><i class="fa fa-telegram"></i></a></li>
+  </ul>
+  <div style="font-size:.97rem;">
+    © طراحی و سئو اختصاصی سایت توسط نمایندگی | هرگونه کپی‌برداری پیگرد قانونی دارد<br>
+    <b>تماس: <a href="tel:09192389894" style="color:#f9f;">09192389894</a></b>
+  </div>
+</footer>
+
+<!-- اسکریپت‌ها -->
+<script src="js/bootstrap.bundle.min.js"></script>
+<!-- Supabase CDN -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+<!-- Supabase Client Config -->
+<script src="supabaseClient.js"></script>
+
+<!-- کد هندل کردن فرم -->
+<script type="module">
+  const form = document.querySelector('#contact-form');
+  ...
+</script>
+
+<script>
+  const form = document.querySelector('#contact-form');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const full_name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    const supabase = window.supabaseClient;
+
+    const { data, error } = await supabase
+      .from('contact_messages')
+      .insert([{ full_name, email, phone, message }]);
+
+    if (error) {
+      alert('❌ خطا در ارسال پیام: ' + error.message);
+    } else {
+      alert('✅ پیام با موفقیت ارسال شد!');
+      form.reset();
+    }
+  });
+</script>
+
 </body>
 </html>
