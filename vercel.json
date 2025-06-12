@@ -6,20 +6,42 @@
       "use": "@vercel/static"
     },
     {
-      "src": "css/*.css",
+      "src": "css/**/*.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "js/**/*.js",
       "use": "@vercel/static"
     },
     {
       "src": "images/**/*",
       "use": "@vercel/static"
+    },
+    {
+      "src": "fonts/**/*",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
-  {
-    "src": "/([^/.]+)$",
-    "dest": "/$1.html"
-  }
-]
-
+    {
+      "src": "/",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/([^/.]+)$",
+      "dest": "/$1.html"
+    },
+    {
+      "src": "/shop",
+      "dest": "/shop.html"
+    },
+    {
+      "src": "/about",
+      "dest": "/about_us.html"
+    },
+    {
+      "src": "/contact",
+      "dest": "/contact.html"
+    }
+  ]
 }
-
