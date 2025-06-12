@@ -80,20 +80,20 @@
 <body>
 
   <!-- Navbar -->
-  <div id="navbar-container"></div>
-  <script>
-    fetch('navbar.html')
-      .then(r => r.text())
-      .then(html => {
-        document.getElementById('navbar-container').innerHTML = html;
-        const page = location.pathname.split('/').pop();
-        document.querySelectorAll('#main-navbar .navbar-menu a')
-          .forEach(a => {
-            if (a.getAttribute('href') === page) 
-              a.parentElement.classList.add('active');
-          });
-      });
-  </script>
+<div id="navbar-container"></div>
+
+<script>
+fetch("/navbar.html")
+  .then(r => r.text())
+  .then(html => {
+    document.getElementById("navbar-container").innerHTML = html;
+
+    // بعد از لود navbar، اسکریپت‌های بوت‌استرپ را دستی بارگذاری کن
+    const bootstrapScript = document.createElement("script");
+    bootstrapScript.src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js";
+    document.body.appendChild(bootstrapScript);
+  });
+</script>
 
   <!-- Header -->
   <header class="about-header">
