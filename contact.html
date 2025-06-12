@@ -58,17 +58,40 @@
 <!-- Navbar -->
 <div id="navbar-container"></div>
 <script>
-  fetch('navbar.html')
-    .then(r => r.text())
-    .then(html => {
-      document.getElementById('navbar-container').innerHTML = html;
-      const page = location.pathname.split('/').pop();
-      document.querySelectorAll('#main-navbar .navbar-menu a')
-        .forEach(a => {
-          if (a.getAttribute('href') === page) a.parentElement.classList.add('active');
-        });
-    });
+  document.addEventListener("DOMContentLoaded", function () {
+    fetch("/navbar.html") // اگر فایل در روت است
+      .then(r => r.text())
+      .then(html => {
+        const container = document.getElementById("navbar-container");
+        container.innerHTML = html;
+
+        // فعال‌سازی دکمه همبرگر موبایل
+        const waitUntilBootstrapReady = () => {
+          if (typeof $ !== 'undefined' && typeof $.fn.collapse !== 'undefined') {
+
+            $('.navbar-toggle').off('click').on('click', function () {
+              $('#main-navbar-collapse').collapse('toggle');
+            });
+
+            // تعیین لینک فعال
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            document.querySelectorAll('#main-navbar-collapse a').forEach(a => {
+              const href = a.getAttribute('href').split('/').pop();
+              if (href === currentPage) {
+                a.parentElement.classList.add('active');
+              }
+            });
+
+          } else {
+            setTimeout(waitUntilBootstrapReady, 100);
+          }
+        };
+
+        waitUntilBootstrapReady();
+      });
+  });
 </script>
+
 
 <!-- Header -->
 <header class="main-header">

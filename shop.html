@@ -73,26 +73,42 @@
 <body>
   <!-- Navbar -->
 <div id="navbar-container"></div>
-
 <script>
-  fetch("/navbar.html")
-    .then(r => r.text())
-    .then(html => {
-      document.getElementById("navbar-container").innerHTML = html;
+  document.addEventListener("DOMContentLoaded", function () {
+    fetch("/navbar.html")
+      .then(r => r.text())
+      .then(html => {
+        const container = document.getElementById("navbar-container");
+        container.innerHTML = html;
 
-      // منتظر بمون تا Bootstrap JS کامل لود بشه
-      const waitUntilBootstrapLoaded = () => {
-        if (typeof $ !== 'undefined' && typeof $.fn.collapse !== 'undefined') {
-          $('.navbar-toggle').off('click').on('click', function () {
-            $('#main-navbar-collapse').collapse('toggle');
-          });
-        } else {
-          setTimeout(waitUntilBootstrapLoaded, 100);
-        }
-      };
-      waitUntilBootstrapLoaded();
-    });
+        // همبرگر موبایل و فعال‌سازی لینک‌ها
+        const waitUntilBootstrapLoaded = () => {
+          if (typeof $ !== 'undefined' && typeof $.fn.collapse !== 'undefined') {
+
+            // دکمه همبرگر موبایل
+            $('.navbar-toggle').off('click').on('click', function () {
+              $('#main-navbar-collapse').collapse('toggle');
+            });
+
+            // لینک فعال (active)
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            document.querySelectorAll('#main-navbar-collapse a').forEach(a => {
+              const href = a.getAttribute('href').split('/').pop();
+              if (href === currentPage) {
+                a.parentElement.classList.add('active');
+              }
+            });
+
+          } else {
+            setTimeout(waitUntilBootstrapLoaded, 100);
+          }
+        };
+
+        waitUntilBootstrapLoaded();
+      });
+  });
 </script>
+
 
 
   <!-- Header -->
