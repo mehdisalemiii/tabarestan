@@ -190,17 +190,28 @@
   <i class="fa fa-chevron-up"></i>
 </a>
 <body>
-  <div id="navbar-container"></div>
-  <script>
-    fetch('../navbar.html')
-      .then(r => r.text())
-      .then(html => {
-        document.getElementById('navbar-container').innerHTML = html;
-        const page = location.pathname.split('/').pop();
-        document.querySelectorAll('#main-navbar .navbar-menu a')
-          .forEach(a => a.getAttribute('href') === page && a.parentElement.classList.add('active'));
-      });
-  </script>
+<div id="navbar-container"></div>
+
+<script>
+  fetch("/navbar.html")
+    .then(r => r.text())
+    .then(html => {
+      document.getElementById("navbar-container").innerHTML = html;
+
+      // منتظر بمون تا Bootstrap JS کامل لود بشه
+      const waitUntilBootstrapLoaded = () => {
+        if (typeof $ !== 'undefined' && typeof $.fn.collapse !== 'undefined') {
+          $('.navbar-toggle').off('click').on('click', function () {
+            $('#main-navbar-collapse').collapse('toggle');
+          });
+        } else {
+          setTimeout(waitUntilBootstrapLoaded, 100);
+        }
+      };
+      waitUntilBootstrapLoaded();
+    });
+</script>
+
 
 <header class="main-header" style="text-align:center; padding:90px 16px 32px;">
   <h1 style="font-weight:900; font-size:2rem; color:#1551a1;">مخازن کلرزنی طبرستان</h1>

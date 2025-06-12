@@ -72,17 +72,28 @@
 </a>
 <body>
   <!-- Navbar -->
-  <div id="navbar-container"></div>
-  <script>
-    fetch('navbar.html')
-      .then(r => r.text())
-      .then(html => {
-        document.getElementById('navbar-container').innerHTML = html;
-        const page = location.pathname.split('/').pop();
-        document.querySelectorAll('#main-navbar .navbar-menu a')
-          .forEach(a => a.getAttribute('href') === page && a.parentElement.classList.add('active'));
-      });
-  </script> <!-- navbar.html :contentReference[oaicite:0]{index=0}:contentReference[oaicite:1]{index=1} -->
+<div id="navbar-container"></div>
+
+<script>
+  fetch("/navbar.html")
+    .then(r => r.text())
+    .then(html => {
+      document.getElementById("navbar-container").innerHTML = html;
+
+      // منتظر بمون تا Bootstrap JS کامل لود بشه
+      const waitUntilBootstrapLoaded = () => {
+        if (typeof $ !== 'undefined' && typeof $.fn.collapse !== 'undefined') {
+          $('.navbar-toggle').off('click').on('click', function () {
+            $('#main-navbar-collapse').collapse('toggle');
+          });
+        } else {
+          setTimeout(waitUntilBootstrapLoaded, 100);
+        }
+      };
+      waitUntilBootstrapLoaded();
+    });
+</script>
+
 
   <!-- Header -->
   <header class="main-header">
