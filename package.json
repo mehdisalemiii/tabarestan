@@ -11,5 +11,10 @@
   "description": "",
   "dependencies": {
     "@supabase/supabase-js": "^2.49.1"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^7.0.2",
+    "cssnano": "^7.0.7",
+    "postcss-cli": "^11.0.1"
   }
 }
