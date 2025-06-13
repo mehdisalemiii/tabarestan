@@ -4,16 +4,22 @@
   <meta charset="UTF-8">
   <title>درباره ما | نمایندگی طبرستان</title>
   <meta name="description" content="نمایندگی رسمی فروش مخازن آب طبرستان: تاریخچه، اهداف، و تیم مجرب ما را بشناسید. بهترین کیفیت با تضمین خدمات پس از فروش.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- CSS های مشترک -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- فونت ایران -->
   <link href="https://cdn.fontcdn.ir/Fonts/fontiran.css" rel="stylesheet">
+  <!-- استایل سفارشی -->
   <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="images/tabarestan.png">
+  <link rel="icon" href="images/tabarestan.png">
 
   <style>
-    /* هدر صفحه */
+    /* هدر صفحه درباره ما */
     .about-header {
       background: #1551a1 url('images/about-bg.jpg') center/cover no-repeat;
       color: #fff;
@@ -33,7 +39,7 @@
       max-width: 720px;
       margin: 0 auto;
     }
-    /* بخش معرفی */
+    /* بخش تیم ما */
     .team-section {
       padding: 60px 20px;
     }
@@ -69,39 +75,50 @@
     }
   </style>
 </head>
-<a href="https://wa.me/989192389894?text=سلام برای خرید مخزن آب طبرستان راهنمایی می‌خواهم"
-   class="whatsapp-float" target="_blank" rel="noopener">
-    <img src="images/social_15707820.png" alt="واتساپ" class="whatsapp-icon">
-    <span class="whatsapp-text">مشاوره فوری واتساپ</span>
-</a>
-<a href="#" class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">
-  <i class="fa fa-chevron-up"></i>
-</a>
 <body>
 
+  <!-- دکمه واتساپ -->
+  <a href="https://wa.me/989192389894?text=سلام برای خرید مخزن آب طبرستان راهنمایی می‌خواهم"
+     class="whatsapp-float" target="_blank" rel="noopener">
+    <img src="images/social_15707820.png" alt="واتساپ" class="whatsapp-icon">
+    <span class="whatsapp-text">مشاوره فوری واتساپ</span>
+  </a>
+
+  <!-- دکمه بازگشت به بالا -->
+  <a href="#" class="back-to-top"
+     onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">
+    <i class="fa fa-chevron-up"></i>
+  </a>
+
   <!-- Navbar -->
-<div id="navbar-container"></div>
-
-<script>
-  fetch("/navbar.html")
-    .then(r => r.text())
-    .then(html => {
-      document.getElementById("navbar-container").innerHTML = html;
-
-      // منتظر بمون تا Bootstrap JS کامل لود بشه
-      const waitUntilBootstrapLoaded = () => {
-        if (typeof $ !== 'undefined' && typeof $.fn.collapse !== 'undefined') {
-          $('.navbar-toggle').off('click').on('click', function () {
-            $('#main-navbar-collapse').collapse('toggle');
-          });
-        } else {
-          setTimeout(waitUntilBootstrapLoaded, 100);
-        }
-      };
-      waitUntilBootstrapLoaded();
+  <div id="navbar-container"></div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      fetch('/navbar.html')
+        .then(r => r.text())
+        .then(html => {
+          document.getElementById('navbar-container').innerHTML = html;
+          (function initNavbar() {
+            if (typeof $ !== 'undefined' && typeof $.fn.collapse !== 'undefined') {
+              // همبرگر موبایل
+              $('.navbar-toggle').off('click').on('click', function() {
+                $('#main-navbar-collapse').collapse('toggle');
+              });
+              // لینک فعال
+              var current = window.location.pathname.split('/').pop() || 'index.html';
+              $('#main-navbar-collapse a').each(function() {
+                var href = $(this).attr('href').split('/').pop();
+                if (href === current) {
+                  $(this).parent().addClass('active');
+                }
+              });
+            } else {
+              setTimeout(initNavbar, 100);
+            }
+          })();
+        });
     });
-</script>
-
+  </script>
 
   <!-- Header -->
   <header class="about-header">
@@ -116,7 +133,6 @@
   <main class="container team-section">
     <h2>تیم ما</h2>
     <div class="row team-cards">
-      <!-- کارت عضوی از تیم -->
       <div class="col-md-4 mb-4">
         <div class="card">
           <img src="images/team1.jpg" class="card-img-top" alt="مدیرعامل">
@@ -149,18 +165,22 @@
 
   <!-- Footer -->
   <footer>
-    <div>نمایندگی رسمی فروش مخازن آب طبرستان در پرند، رباط کریم و تهران</div>
+    <div style="font-size:1.12rem; margin-bottom:13px;">
+      نمایندگی رسمی فروش مخازن آب طبرستان در پرند، رباط کریم و تهران
+    </div>
     <ul class="social-icons">
       <li><a href="#" title="اینستاگرام"><i class="fa fa-instagram"></i></a></li>
-      <li><a href="https://wa.me/989192389894" title="واتساپ"><i class="fa fa-whatsapp"></i></a></li>
+      <li><a href="https://wa.me/989192389894" target="_blank" rel="noopener" title="واتساپ"><i class="fa fa-whatsapp"></i></a></li>
       <li><a href="#" title="تلگرام"><i class="fa fa-telegram"></i></a></li>
     </ul>
-    <div>
+    <div style="font-size:.97rem;">
       © طراحی و سئو اختصاصی سایت توسط نمایندگی | هرگونه کپی‌برداری پیگرد قانونی دارد<br>
-      <b>تماس: <a href="tel:09192389894">09192389894</a></b>
+      <b>تماس: <a href="tel:09192389894" style="color:#f9f;">09192389894</a></b>
     </div>
   </footer>
 
-  <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- اسکریپت‌ها -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 </html>
