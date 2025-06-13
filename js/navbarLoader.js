@@ -1,19 +1,26 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
   fetch('/navbar.html')
-    .then(res => res.text())
-    .then(html => {
+    .then(function(res) { return res.text(); })
+    .then(function(html) {
       document.getElementById('navbar-container').innerHTML = html;
 
-      // همبرگر موبایل
-      $('.navbar-toggle').off('click').on('click', () => {
-        $('#main-navbar-collapse').collapse('toggle');
-      });
-
-      // نشانه‌گذاری لینک فعال
-      const page = window.location.pathname.split('/').pop() || 'index.html';
-      $('#main-navbar-collapse a').each(function() {
-        const href = $(this).attr('href').split('/').pop();
-        if (href === page) $(this).parent().addClass('active');
-      });
+      // منتظر آماده شدن Bootstrap و jQuery باش
+      (function initNavbar() {
+        if (typeof $ !== 'undefined' && typeof $.fn.collapse !== 'undefined') {
+          // همبرگر موبایل
+          $('.navbar-toggle').off('click').on('click', function() {
+            $('#main-navbar-collapse').collapse('toggle');
+          });
+          // نشانه‌گذاری لینک فعال
+          var page = window.location.pathname.split('/').pop() || 'index.html';
+          $('#main-navbar-collapse a').each(function() {
+            if ($(this).attr('href').split('/').pop() === page) {
+              $(this).parent().addClass('active');
+            }
+          });
+        } else {
+          setTimeout(initNavbar, 100);
+        }
+      })();
     });
 });

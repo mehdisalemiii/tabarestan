@@ -7,8 +7,9 @@
   <meta name="description" content="خرید انواع مخزن آب طبرستان (افقی، عمودی، بیضی، مکعبی، زیرپله‌ای) با ارسال فوری در تهران، پرند و رباط کریم.">
   <meta name="keywords" content="مخزن آب, طبرستان, خرید مخزن, فروش مخزن">
   <meta name="author" content="نمایندگی مخازن آب طبرستان">
-  <link rel="canonical" href="https://YOUR-SITE.com/">
 
+  <link rel="preload" href="/images/header-banner.webp" as="image" type="image/webp">
+  <link rel="canonical" href="https://YOUR-SITE.com/">
   <link rel="icon" href="images/tabarestan.png">
   <!-- CSS اصلی -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -138,32 +139,14 @@
     }
   </style>
 </head>
-<a href="#" class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">
-  <i class="fa fa-chevron-up"></i>
-</a>
-<body>
-<div id="navbar-container"></div>
+  <!-- Back to top -->
+  <a href="#" class="back-to-top"
+     onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">
+    <i class="fa fa-chevron-up"></i>
+  </a>
 
-<!-- لود کردن ناوبار از فایل خارجی -->
-<script>
-  fetch("/navbar.html")
-    .then(r => r.text())
-    .then(html => {
-      document.getElementById("navbar-container").innerHTML = html;
-
-      // فعال‌سازی همبرگر موبایل
-      const waitForBootstrap = () => {
-        if (typeof $ !== 'undefined' && typeof $.fn.collapse !== 'undefined') {
-        $('.navbar-toggle').on('click', function () {
-          $('#main-navbar-collapse').collapse('toggle');
-        });
-        } else {
-          setTimeout(waitForBootstrap, 100);
-        }
-      };
-      waitForBootstrap();
-    });
-</script>
+  <!-- Navbar placeholder -->
+  <div id="navbar-container"></div>
 
 
   <main>
@@ -539,6 +522,7 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/theme.js"></script> <!-- اگر وجود دارد -->
+<script src="/js/navbarLoader.js" defer></script>
 
 <!-- ✅ لود navbar و فعال‌سازی همبرگر -->
 <script>
