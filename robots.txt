@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://plasticsalemi.com/sitemap.xml
+Sitemap: https://tabarestan.vercel.app/sitemap.xml
