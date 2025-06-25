@@ -20,35 +20,39 @@
     {
       "src": "fonts/**/*",
       "use": "@vercel/static"
+    },
+    {
+      "src": "public/**/*",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/",
+      "src": "/$",
       "dest": "/index.html"
     },
     {
-      "src": "/([^/.]+)$",
-      "dest": "/$1.html"
-    },
-    {
-      "src": "/shop",
+      "src": "/shop$",
       "dest": "/shop.html"
     },
     {
-      "src": "/about",
+      "src": "/about$",
       "dest": "/about_us.html"
     },
     {
-      "src": "/contact",
+      "src": "/contact$",
       "dest": "/contact.html"
     },
     {
-      "src": "/robots.txt",
+      "src": "^/([^/.]+)$",
+      "dest": "/$1.html"
+    },
+    {
+      "src": "/robots\\.txt$",
       "dest": "/public/robots.txt"
     },
     {
-      "src": "/sitemap.xml",
+      "src": "/sitemap\\.xml$",
       "dest": "/public/sitemap.xml"
     }
   ]
