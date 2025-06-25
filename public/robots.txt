@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tabarestan.vercel.app/sitemap.xml
