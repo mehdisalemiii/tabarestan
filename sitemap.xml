@@ -1,54 +1,111 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://tabarestan.vercel.app/index.html</loc>
-  </url>
-  <url>
-    <loc>https://tabarestan.vercel.app/shop.html</loc>
-  </url>
-  <url>
     <loc>https://tabarestan.vercel.app/about_us.html</loc>
+    <lastmod>2025-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tabarestan.vercel.app/contact.html</loc>
+    <lastmod>2025-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tabarestan.vercel.app/categories/category-vertical.html</loc>
+    <loc>https://tabarestan.vercel.app/index.html</loc>
+    <lastmod>2025-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://tabarestan.vercel.app/categories/category-horizontal.html</loc>
+    <loc>https://tabarestan.vercel.app/navbar.html</loc>
+    <lastmod>2025-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tabarestan.vercel.app/categories/category-understair.html</loc>
-  </url>
-  <url>
-    <loc>https://tabarestan.vercel.app/categories/category-cubic.html</loc>
-  </url>
-  <url>
-    <loc>https://tabarestan.vercel.app/categories/category-portable.html</loc>
-  </url>
-  <url>
-    <loc>https://tabarestan.vercel.app/categories/category-funnel.html</loc>
-  </url>
-  <url>
-    <loc>https://tabarestan.vercel.app/categories/category-doorway.html</loc>
-  </url>
-  <url>
-    <loc>https://tabarestan.vercel.app/categories/category-oval.html</loc>
-  </url>
-  <url>
-    <loc>https://tabarestan.vercel.app/categories/category-expansion.html</loc>
+    <loc>https://tabarestan.vercel.app/shop.html</loc>
+    <lastmod>2025-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tabarestan.vercel.app/categories/category-chlorine.html</loc>
+    <lastmod>2025-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tabarestan.vercel.app/categories/category-cubic.html</loc>
+    <lastmod>2025-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tabarestan.vercel.app/categories/category-doorway.html</loc>
+    <lastmod>2025-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tabarestan.vercel.app/categories/category-expansion.html</loc>
+    <lastmod>2025-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tabarestan.vercel.app/categories/category-funnel.html</loc>
+    <lastmod>2025-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tabarestan.vercel.app/categories/category-horizontal.html</loc>
+    <lastmod>2025-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tabarestan.vercel.app/categories/category-oval.html</loc>
+    <lastmod>2025-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tabarestan.vercel.app/categories/category-pools.html</loc>
+    <lastmod>2025-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tabarestan.vercel.app/categories/category-round.html</loc>
+    <loc>https://tabarestan.vercel.app/categories/category-portable.html</loc>
+    <lastmod>2025-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://tabarestan.vercel.app/categories/category-rectangular.html</loc>
+    <lastmod>2025-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tabarestan.vercel.app/categories/category-round.html</loc>
+    <lastmod>2025-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tabarestan.vercel.app/categories/category-understair.html</loc>
+    <lastmod>2025-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tabarestan.vercel.app/categories/category-vertical.html</loc>
+    <lastmod>2025-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
