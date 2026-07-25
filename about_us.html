@@ -1,26 +1,8 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ERZCH1MVNC"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-ERZCH1MVNC', { page_path: window.location.pathname });
-  </script>
-
-  <meta charset="UTF-8">
-  <title>خرید مخزن آب طبرستان | نمایندگی پرند و رباط کریم</title>
-  <!-- … بقیهٔ متا و CSS و … … -->
-</head>
-<body>
-  <!-- بقیهٔ محتوا … -->
-</body>
-</html>
-
-  <title>درباره ما | نمایندگی طبرستان</title>
-  <meta name="description" content="نمایندگی رسمی فروش مخازن آب طبرستان: تاریخچه، اهداف، و تیم مجرب ما را بشناسید. بهترین کیفیت با تضمین خدمات پس از فروش.">
+  <title>درباره ما | نمایندگی سالمی - مخازن طبرستان</title>
+  <meta name="description" content="نمایندگی رسمی سالمی، عرضه‌کنندهٔ مستقیم مخازن پلی‌اتیلن طبرستان در پرند، رباط‌کریم و تهران. آشنایی با برند طبرستان و نمایندگی محلی ما.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Bootstrap CSS -->
@@ -32,7 +14,7 @@
   <!-- فونت ایران -->
   <link href="https://cdn.fontcdn.ir/Fonts/fontiran.css" rel="stylesheet">
   <!-- استایل سفارشی -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="images/tabarestan.png">
 
   <style>
@@ -56,39 +38,60 @@
       max-width: 720px;
       margin: 0 auto;
     }
-    /* بخش تیم ما */
-    .team-section {
-      padding: 60px 20px;
-    }
-    .team-section h2 {
-      font-size: 2rem;
-      margin-bottom: 24px;
+
+    /* گالری دفتر و انبار */
+    .office-gallery-section {
+      padding: 20px 20px 70px;
       text-align: center;
     }
-    .team-cards .card {
-      border: none;
-      border-radius: 16px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
-      transition: transform .2s;
+    .office-gallery-section h2 {
+      font-size: 1.9rem;
+      font-weight: 800;
+      color: #1551a1;
+      margin-bottom: 10px;
     }
-    .team-cards .card:hover {
-      transform: translateY(-6px);
-    }
-    .team-cards .card img {
-      border-top-left-radius: 16px;
-      border-top-right-radius: 16px;
-    }
-    .team-cards .card-body {
-      text-align: center;
-    }
-    .team-cards .card-title {
-      font-size: 1.2rem;
-      font-weight: 700;
-      margin-top: 10px;
-    }
-    .team-cards .card-text {
-      font-size: .95rem;
+    .office-gallery-lead {
       color: #555;
+      max-width: 640px;
+      margin: 0 auto 32px;
+      font-size: 1.02rem;
+    }
+    .office-gallery-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .office-gallery-item {
+      position: relative;
+      width: 440px;
+      max-width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 6px 22px rgba(21,81,161,.1);
+      transition: transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s ease;
+    }
+    .office-gallery-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 32px rgba(21,81,161,.18);
+    }
+    .office-gallery-item img {
+      width: 100%;
+      height: 330px;
+      object-fit: cover;
+      display: block;
+      transition: transform .5s ease;
+    }
+    .office-gallery-item:hover img { transform: scale(1.06); }
+    .office-gallery-caption {
+      position: absolute;
+      bottom: 0; right: 0; left: 0;
+      background: linear-gradient(0deg, rgba(10,20,40,.75), transparent);
+      color: #fff;
+      font-size: .88rem;
+      font-weight: 700;
+      padding: 24px 14px 10px;
+      text-align: center;
     }
   </style>
 </head>
@@ -139,51 +142,56 @@
 
   <!-- Header -->
   <header class="about-header">
-    <h1>ما کی هستیم؟</h1>
+    <h1>نمایندگی رسمی فروش مخازن طبرستان - سالمی</h1>
     <p>
-      نمایندگی رسمی مخازن آب طبرستان بیش از ۱۰ سال سابقه در تأمین و ارائه بهترین مخازن پلی‌اتیلن صنعتی و شهری دارد.
-      با تکیه بر کیفیت برتر تولیدات و پشتیبانی تخصصی، همراه همیشگی پروژه‌های شما هستیم.
+      نمایندگی مستقیم و رسمی مخازن آب و مخازن پلی‌اتیلن «مجتمع پلاستیک طبرستان» در پرند، به مدیریت آقای سالمی.
+      محصول اصل، مستقیم از کارخانه، با ارسال سریع به پرند، رباط‌کریم و تهران.
     </p>
   </header>
 
-  <!-- بخش تیم ما -->
-  <main class="container team-section">
-    <h2>تیم ما</h2>
-    <div class="row team-cards">
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/team1.jpg" class="card-img-top" alt="مدیرعامل">
-          <div class="card-body">
-            <h5 class="card-title">آقای احمد سالمی</h5>
-            <p class="card-text">مدیرعامل و مؤسس نمایندگی طبرستان با بیش از ۱۵ سال تجربه در صنعت آب و محیط‌زیست.</p>
-          </div>
-        </div>
+  <!-- دربارهٔ برند مادر -->
+  <section class="container about-block reveal">
+    <h2>دربارهٔ برند طبرستان</h2>
+    <p>
+      محصولاتی که عرضه می‌کنیم متعلق به «مجتمع پلاستیک طبرستان»، یکی از بزرگ‌ترین تولیدکنندگان مخازن پلی‌اتیلن ایران به روش روتومولدینگ است.
+      فعالیت رسمی این مجموعه از سال ۱۳۷۵ آغاز شده و امروز با بیش از ۳۰۰ نمایندگی فعال در سراسر کشور و شعب تولیدی در ساری، شیراز و اصفهان،
+      یکی از شناخته‌شده‌ترین برندهای صنعت مخازن پلی‌اتیلن به‌شمار می‌رود. طبرستان علاوه بر مخازن آب، در زمینهٔ بشکه‌های بسته‌بندی بهداشتی،
+      محصولات دریایی و استخرهای کودک هم فعالیت دارد.
+    </p>
+  </section>
+
+  <!-- دربارهٔ نمایندگی سالمی -->
+  <section class="container about-block reveal">
+    <h2>نمایندگی سالمی در پرند</h2>
+    <p>
+      نمایندگی سالمی، زیرمجموعهٔ رسمی مجتمع پلاستیک طبرستان، محصولات این برند رو به‌صورت مستقیم و بدون واسطه در شهرک صنعتی پرند عرضه می‌کنه.
+      اصالت کالا، قیمت مصوب کارخانه و ارسال سریع به پرند، رباط‌کریم و تهران، تعهد ماست.
+    </p>
+  </section>
+
+  <!-- بازدید از دفتر و انبار -->
+  <main class="container office-gallery-section">
+    <h2 class="reveal">بازدید از دفتر و انبار ما در پرند</h2>
+    <p class="office-gallery-lead reveal">این‌جا محل واقعی فعالیت نمایندگی سالمیه — همون‌جایی که سفارش‌ها آماده و ارسال می‌شن.</p>
+    <div class="office-gallery-grid">
+      <div class="office-gallery-item reveal">
+        <img src="images/office-warehouse-stock.webp" alt="انبار موجودی مخازن طبرستان در پرند" loading="lazy">
+        <span class="office-gallery-caption">انبار موجودی — پرند</span>
       </div>
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/team2.jpg" class="card-img-top" alt="مدیر فروش">
-          <div class="card-body">
-            <h5 class="card-title">خانم سارا رضایی</h5>
-            <p class="card-text">مدیر فروش و بازاریابی با تخصص در بهبود تجربه مشتری و راهکارهای B2B.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="images/team3.jpg" class="card-img-top" alt="پشتیبانی">
-          <div class="card-body">
-            <h5 class="card-title">آقای فرزاد عباسی</h5>
-            <p class="card-text">مسئول خدمات پس از فروش و پشتیبانی فنی با پاسخگویی ۲۴/۷.</p>
-          </div>
-        </div>
+      <div class="office-gallery-item reveal">
+        <img src="images/office-desk-wide.webp" alt="دفتر نمایندگی طبرستان" loading="lazy">
+        <span class="office-gallery-caption">دفتر نمایندگی</span>
       </div>
     </div>
   </main>
 
   <!-- Footer -->
   <footer>
-    <div style="font-size:1.12rem; margin-bottom:13px;">
+    <div style="font-size:1.12rem; margin-bottom:6px;">
       نمایندگی رسمی فروش مخازن آب طبرستان در پرند، رباط کریم و تهران
+    </div>
+    <div style="font-size:.92rem; margin-bottom:13px; opacity:.85;">
+      آدرس: شهرک صنعتی پرند، میدان صنعت، بعد از میدان فناوری، گلزار، گل آذین، پلاک ۲۳، قطعه D85
     </div>
     <ul class="social-icons">
       <li><a href="#" title="اینستاگرام"><i class="fa fa-instagram"></i></a></li>
@@ -199,5 +207,28 @@
   <!-- اسکریپت‌ها -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!-- انیمیشن ورود موقع اسکرول -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var targets = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window) || !targets.length) {
+      targets.forEach(function (el) { el.classList.add('is-visible'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    targets.forEach(function (el) { io.observe(el); });
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="/supabaseClient.js"></script>
+<script src="/js/cart.js"></script>
 </body>
+
 </html>
