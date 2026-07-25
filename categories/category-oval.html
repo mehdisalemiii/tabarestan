@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <title>مخازن عمودی | نمایندگی طبرستان</title>
-  <meta name="description" content="لیست کامل مخازن آب عمودی طبرستان با مشخصات فنی، ابعاد، حجم‌ها و کاربردها. خرید آنلاین با ارسال فوری.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/bootstrap.min.css">
-  <link rel="stylesheet" href="../css/font-awesome.min.css">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="icon" href="../images/tabarestan.png" type="image/png">
 
-  <style>
+<html dir="rtl" lang="fa">
+<head>
+<meta charset="utf-8"/>
+<title>مخازن عمودی | نمایندگی طبرستان</title>
+<meta content="لیست کامل مخازن آب عمودی طبرستان با مشخصات فنی، ابعاد، حجم‌ها و کاربردها. خرید آنلاین با ارسال فوری." name="description"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../css/bootstrap.min.css" rel="stylesheet"/>
+<link href="../css/font-awesome.min.css" rel="stylesheet"/>
+<link href="../css/style.min.css" rel="stylesheet"/>
+<link href="../images/tabarestan.png" rel="icon" type="image/png"/>
+<style>
 
     .specs-table-wrapper {
     max-width: 1000px;
@@ -55,84 +55,25 @@
       margin-top: 56px;
     }
 
-    .featured-products {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 24px;
-      margin: 32px auto 64px;
-      padding: 0 16px;
-    }
+    
 
-    .product-card-blur {
-      width: 320px;
-      height: 240px;
-      border-radius: 20px;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
-      background-image: url('../images/categories/oval.webp');
-      background-size: cover;
-      background-position: center;
-      transition: transform 0.3s ease;
-    }
+    
 
-        .product-card-blur {
-        transition: transform 0.4s ease, box-shadow 0.4s ease;
-        }
+        
 
-        .product-card-blur:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
-        }
+        
 
-    .product-card-blur::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      backdrop-filter: blur(4px);
-      background: rgba(0, 0, 0, 0.4);
-      z-index: 1;
-    }
+    
 
-    .product-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      height: 100%;
-      padding: 20px;
-      z-index: 2;
-      color: #fff;
-      position: relative;
-    }
+    
 
-    .product-content h4 {
-      font-size: 1.3rem;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
+    
 
-    .product-content p {
-      font-size: 0.95rem;
-      margin: 4px 0;
-    }
+    
 
-    .product-content .btn-tel {
-      margin-top: 10px;
-      background: #fff;
-      color: #1551a1;
-      padding: 7px 16px;
-      border-radius: 25px;
-      font-weight: bold;
-      text-decoration: none;
-      display: inline-block;
-    }
+    
 
-    .product-card-blur:hover {
-      transform: translateY(-5px);
-    }
+    
 
     .section-container {
       padding: 0 16px;
@@ -181,104 +122,106 @@
 }
   </style>
 </head>
-<a href="https://wa.me/989192389894?text=سلام برای خرید مخزن آب طبرستان راهنمایی می‌خواهم"
-   class="whatsapp-float" target="_blank" rel="noopener">
-    <img src="../images/social_15707820.png" alt="واتساپ" class="whatsapp-icon">
-    <span class="whatsapp-text">مشاوره فوری واتساپ</span>
-</a>
-<a href="#" class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">
-  <i class="fa fa-chevron-up"></i>
-</a>
 <body>
-  <div id="navbar-container"></div>
-  <script>
-    fetch('../navbar.html')
+<a class="whatsapp-float" href="https://wa.me/989192389894?text=سلام برای خرید مخزن آب طبرستان راهنمایی می‌خواهم" rel="noopener" target="_blank">
+<img alt="واتساپ" class="whatsapp-icon" src="../images/social_15707820.png"/>
+<span class="whatsapp-text">مشاوره فوری واتساپ</span>
+</a>
+<a class="back-to-top" href="#" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">
+<i class="fa fa-chevron-up"></i>
+</a>
+<div id="navbar-container"></div>
+<script>
+    fetch('/navbar.html')
       .then(r => r.text())
       .then(html => {
         document.getElementById('navbar-container').innerHTML = html;
-        const page = location.pathname.split('/').pop();
-        document.querySelectorAll('#main-navbar .navbar-menu a')
-          .forEach(a => a.getAttribute('href') === page && a.parentElement.classList.add('active'));
+        (function initNavbar() {
+          if (typeof $ !== 'undefined' && typeof $.fn.collapse !== 'undefined') {
+            $('.navbar-toggle').off('click').on('click', function() {
+              $('#main-navbar-collapse').collapse('toggle');
+            });
+            var current = window.location.pathname.split('/').pop() || 'index.html';
+            $('#main-navbar-collapse a').each(function() {
+              var href = $(this).attr('href').split('/').pop();
+              if (href === current) {
+                $(this).parent().addClass('active');
+              }
+            });
+          } else {
+            setTimeout(initNavbar, 100);
+          }
+        })();
       });
   </script>
-
 <header class="main-header" style="text-align:center; padding:90px 16px 32px;">
-  <h1 style="font-weight:900; font-size:2rem; color:#1551a1;">مخازن پلی‌اتیلن بیضی طبرستان</h1>
-  <p style="font-size:1.1rem; max-width:780px; margin:12px auto; line-height:1.9; color:#333;">
-    مخازن بیضی طبرستان به‌دلیل طراحی کم‌ارتفاع و سطح تماس گسترده، گزینه‌ای ایده‌آل برای نصب در پشت‌بام، زیر زمین و محیط‌هایی با محدودیت ارتفاع هستند.
-    این مدل‌ها از پلی‌اتیلن باکیفیت تولید شده و در ظرفیت‌های ۵۰۰ تا ۵۰۰۰ لیتر مناسب مصارف خانگی، کشاورزی و صنعتی عرضه می‌شوند.
+<h1 style="font-weight:900; font-size:2rem; color:#1551a1;">مخازن پلی‌اتیلن بیضی طبرستان</h1>
+<p style="font-size:1.1rem; max-width:780px; margin:12px auto; line-height:1.9; color:#333;">
+    مخازن بیضی طبرستان به‌دلیل طراحی کم‌ارتفاع و سطح تماس گسترده، گزینه‌ای ایده‌آل برای نصب در پشت‌بام، زیرزمین و محیط‌هایی با محدودیت ارتفاع هستند.
+    این مدل‌ها از پلی‌اتیلن باکیفیت تولید شده و در ظرفیت‌های ۵۰۰ تا ۵۰۰۰ لیتر، مناسب مصارف خانگی، کشاورزی و صنعتی عرضه می‌شوند. خرید مخزن بیضی طبرستان با ارسال به پرند، رباط‌کریم و تهران از نمایندگی سالمی.
   </p>
 </header>
-
-
-
-  <!-- محصولات پرفروش -->
+<!-- محصولات پرفروش -->
 <h2 class="section-title">محصولات پرفروش</h2>
 <div class="featured-products">
-  <div class="product-card-blur">
-    <div class="product-content">
-      <h4>۵۰۰ لیتری بیضی</h4>
-      <p>ارتفاع: ۵۵cm | طول: ۱۴۱cm</p>
-      <p>کد: 3331251</p>
-      <a class="btn-tel" href="tel:09192389894">سفارش تلفنی</a>
-    </div>
-  </div>
-  <div class="product-card-blur">
-    <div class="product-content">
-      <h4>۱۰۰۰ لیتری بیضی</h4>
-      <p>ارتفاع: ۷۱cm | طول: ۱۶۷cm</p>
-      <p>کد: 3331351</p>
-      <a class="btn-tel" href="tel:09192389894">سفارش تلفنی</a>
-    </div>
-  </div>
-  <div class="product-card-blur">
-    <div class="product-content">
-      <h4>۳۰۰۰ لیتری بیضی</h4>
-      <p>ارتفاع: ۱۰۷cm | طول: ۲۵۲cm</p>
-      <p>کد: 3331441</p>
-      <a class="btn-tel" href="tel:09192389894">سفارش تلفنی</a>
-    </div>
-  </div>
+<div class="product-card-v2 reveal">
+<div class="pc-thumb"><img alt="۵۰۰ لیتری بیضی - طبرستان" loading="lazy" src="../images/categories/oval.webp"/></div>
+<div class="pc-body">
+<h4>۵۰۰ لیتری بیضی</h4>
+<div class="pc-specs"><span>ارتفاع: ۵۵cm</span><span>طول: ۱۴۱cm</span></div>
+<div class="pc-code">کد: 3331251</div>
+<a class="btn-tel" href="tel:09192389894">سفارش تلفنی</a>
+<button class="add-to-cart-btn" data-code="3331251" data-id="3331251" data-specs="ارتفاع: ۵۵cm | طول: ۱۴۱cm" data-title="۵۰۰ لیتری بیضی" type="button">+ افزودن به سبد</button></div>
 </div>
-
-
-
-
-
-  <!-- جدول مشخصات -->
-<section class="specs-table-wrapper">
-  <h2 class="section-title">مشخصات فنی مخازن بیضی</h2>
-  <table class="specs-table">
-    <thead>
-      <tr>
-        <th>نام محصول</th>
-        <th>کد محصول</th>
-        <th>حجم (لیتر)</th>
-        <th>طول (cm)</th>
-        <th>عرض (cm)</th>
-        <th>ارتفاع (cm)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>مخزن 500 لیتری بیضی</td><td>3331251</td><td>500</td><td>141</td><td>95</td><td>55</td></tr>
-      <tr><td>مخزن 1000 لیتری بیضی</td><td>3331351</td><td>1000</td><td>167</td><td>124</td><td>71</td></tr>
-      <tr><td>مخزن 1500 لیتری بیضی</td><td>3331403</td><td>1500</td><td>200</td><td>133</td><td>80</td></tr>
-      <tr><td>مخزن 2000 لیتری بیضی</td><td>3331421</td><td>2000</td><td>222</td><td>146</td><td>89</td></tr>
-      <tr><td>مخزن 3000 لیتری بیضی</td><td>3331441</td><td>3000</td><td>252</td><td>162</td><td>107</td></tr>
-      <tr><td>مخزن 5000 لیتری بیضی</td><td>3331481</td><td>5000</td><td>285</td><td>191</td><td>129</td></tr>
-    </tbody>
-  </table>
+<div class="product-card-v2 reveal">
+<div class="pc-thumb"><img alt="۱۰۰۰ لیتری بیضی - طبرستان" loading="lazy" src="../images/categories/oval.webp"/></div>
+<div class="pc-body">
+<h4>۱۰۰۰ لیتری بیضی</h4>
+<div class="pc-specs"><span>ارتفاع: ۷۱cm</span><span>طول: ۱۶۷cm</span></div>
+<div class="pc-code">کد: 3331351</div>
+<a class="btn-tel" href="tel:09192389894">سفارش تلفنی</a>
+<button class="add-to-cart-btn" data-code="3331351" data-id="3331351" data-specs="ارتفاع: ۷۱cm | طول: ۱۶۷cm" data-title="۱۰۰۰ لیتری بیضی" type="button">+ افزودن به سبد</button></div>
+</div>
+<div class="product-card-v2 reveal">
+<div class="pc-thumb"><img alt="۳۰۰۰ لیتری بیضی - طبرستان" loading="lazy" src="../images/categories/oval.webp"/></div>
+<div class="pc-body">
+<h4>۳۰۰۰ لیتری بیضی</h4>
+<div class="pc-specs"><span>ارتفاع: ۱۰۷cm</span><span>طول: ۲۵۲cm</span></div>
+<div class="pc-code">کد: 3331441</div>
+<a class="btn-tel" href="tel:09192389894">سفارش تلفنی</a>
+<button class="add-to-cart-btn" data-code="3331441" data-id="3331441" data-specs="ارتفاع: ۱۰۷cm | طول: ۲۵۲cm" data-title="۳۰۰۰ لیتری بیضی" type="button">+ افزودن به سبد</button></div>
+</div>
+</div>
+<!-- جدول مشخصات -->
+<section class="specs-table-wrapper reveal">
+<h2 class="section-title">مشخصات فنی مخازن بیضی</h2>
+<table class="specs-table">
+<thead>
+<tr>
+<th>نام محصول</th>
+<th>کد محصول</th>
+<th>حجم (لیتر)</th>
+<th>طول (cm)</th>
+<th>عرض (cm)</th>
+<th>ارتفاع (cm)</th><th>افزودن</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>مخزن 500 لیتری بیضی</td><td>3331251</td><td>500</td><td>141</td><td>95</td><td>55</td><td><button class="add-to-cart-btn" data-code="3331251" data-id="3331251" data-specs="حجم (لیتر): 500 | طول (cm): 141 | عرض (cm): 95 | ارتفاع (cm): 55" data-title="مخزن 500 لیتری بیضی" type="button">+</button></td></tr>
+<tr><td>مخزن 1000 لیتری بیضی</td><td>3331351</td><td>1000</td><td>167</td><td>124</td><td>71</td><td><button class="add-to-cart-btn" data-code="3331351" data-id="3331351" data-specs="حجم (لیتر): 1000 | طول (cm): 167 | عرض (cm): 124 | ارتفاع (cm): 71" data-title="مخزن 1000 لیتری بیضی" type="button">+</button></td></tr>
+<tr><td>مخزن 1500 لیتری بیضی</td><td>3331403</td><td>1500</td><td>200</td><td>133</td><td>80</td><td><button class="add-to-cart-btn" data-code="3331403" data-id="3331403" data-specs="حجم (لیتر): 1500 | طول (cm): 200 | عرض (cm): 133 | ارتفاع (cm): 80" data-title="مخزن 1500 لیتری بیضی" type="button">+</button></td></tr>
+<tr><td>مخزن 2000 لیتری بیضی</td><td>3331421</td><td>2000</td><td>222</td><td>146</td><td>89</td><td><button class="add-to-cart-btn" data-code="3331421" data-id="3331421" data-specs="حجم (لیتر): 2000 | طول (cm): 222 | عرض (cm): 146 | ارتفاع (cm): 89" data-title="مخزن 2000 لیتری بیضی" type="button">+</button></td></tr>
+<tr><td>مخزن 3000 لیتری بیضی</td><td>3331441</td><td>3000</td><td>252</td><td>162</td><td>107</td><td><button class="add-to-cart-btn" data-code="3331441" data-id="3331441" data-specs="حجم (لیتر): 3000 | طول (cm): 252 | عرض (cm): 162 | ارتفاع (cm): 107" data-title="مخزن 3000 لیتری بیضی" type="button">+</button></td></tr>
+<tr><td>مخزن 5000 لیتری بیضی</td><td>3331481</td><td>5000</td><td>285</td><td>191</td><td>129</td><td><button class="add-to-cart-btn" data-code="3331481" data-id="3331481" data-specs="حجم (لیتر): 5000 | طول (cm): 285 | عرض (cm): 191 | ارتفاع (cm): 129" data-title="مخزن 5000 لیتری بیضی" type="button">+</button></td></tr>
+</tbody>
+</table>
 </section>
-
-
-
 <section class="cta-wrapper" style="margin: 48px auto 24px; text-align: center;">
-  <div style="max-width: 600px; margin: auto; padding: 32px 24px; border-radius: 20px; background: #f2f7ff; box-shadow: 0 4px 20px rgba(21, 81, 161, 0.1);">
-    <h3 style="font-weight:800; font-size: 1.3rem; color:#1551a1; margin-bottom: 18px;">نیاز به مشاوره دارید؟</h3>
-    <p style="margin-bottom: 28px; font-size: 1rem; color:#444;">کارشناسان ما آماده پاسخ‌گویی و راهنمایی برای انتخاب بهترین مخزن آب متناسب با نیاز شما هستند.</p>
-    
-    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-      <a href="tel:09192389894" class="cta-btn" style="
+<div style="max-width: 600px; margin: auto; padding: 32px 24px; border-radius: 20px; background: #f2f7ff; box-shadow: 0 4px 20px rgba(21, 81, 161, 0.1);">
+<h3 style="font-weight:800; font-size: 1.3rem; color:#1551a1; margin-bottom: 18px;">نیاز به مشاوره دارید؟</h3>
+<p style="margin-bottom: 28px; font-size: 1rem; color:#444;">کارشناسان ما آماده پاسخ‌گویی و راهنمایی برای انتخاب بهترین مخزن آب متناسب با نیاز شما هستند.</p>
+<div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+<a class="cta-btn" href="tel:09192389894" style="
           background: #1551a1;
           color: #fff;
           padding: 10px 22px;
@@ -288,8 +231,7 @@
           text-decoration: none;
           transition: background 0.3s ease;
       ">📞 مشاوره تلفنی فوری</a>
-
-      <a href="../shop.html" class="cta-btn" style="
+<a class="cta-btn" href="../shop.html" style="
           background: #eaeaea;
           color: #333;
           padding: 10px 22px;
@@ -299,53 +241,70 @@
           text-decoration: none;
           transition: background 0.3s ease;
       ">🔙 بازگشت به فروشگاه</a>
-    </div>
-  </div>
+</div>
+</div>
 </section>
-  </main>
 <section class="section-container" style="margin-top: 12px;">
-  <div style="max-width: 800px; margin:auto; background:#f9f9f9; padding:40px 24px; border-radius:18px; box-shadow:0 8px 28px rgba(0,0,0,0.06);">
-    <h2 class="section-title" style="text-align:center; font-weight:800; font-size:1.6rem; color:#1551a1; margin-bottom:32px;">سوالات متداول درباره مخازن بیضی طبرستان</h2>
-
-    <details style="margin-bottom: 18px; border-bottom:1px solid #ddd; padding-bottom:12px;">
-      <summary style="font-weight: bold; font-size:1.05rem; cursor: pointer; color:#333;">مخازن بیضی برای چه مکان‌هایی مناسب هستند؟</summary>
-      <p style="margin-top: 10px; font-size: 0.95rem;">این مخازن به‌دلیل ارتفاع کم و طراحی پهن، مناسب نصب در زیر سقف‌های کوتاه، داخل اتاقک، زیرزمین یا پشت‌بام هستند.</p>
-    </details>
-
-    <details style="margin-bottom: 18px; border-bottom:1px solid #ddd; padding-bottom:12px;">
-      <summary style="font-weight: bold; font-size:1.05rem; cursor: pointer; color:#333;">آیا امکان جابجایی این مخازن به‌سادگی وجود دارد؟</summary>
-      <p style="margin-top: 10px; font-size: 0.95rem;">بله، به‌دلیل ارتفاع کم و تعادل بیشتر در هنگام پر شدن، حمل و نصب آن‌ها آسان‌تر از مدل‌های عمودی است.</p>
-    </details>
-
-    <details style="margin-bottom: 18px; border-bottom:1px solid #ddd; padding-bottom:12px;">
-      <summary style="font-weight: bold; font-size:1.05rem; cursor: pointer; color:#333;">چه تفاوتی با مخازن افقی دارند؟</summary>
-      <p style="margin-top: 10px; font-size: 0.95rem;">مخازن بیضی نسبت به مدل‌های افقی پهن‌تر و کم‌ارتفاع‌تر هستند و برای مکان‌هایی که محدودیت در ارتفاع وجود دارد مناسب‌ترند.</p>
-    </details>
-
-    <details style="margin-bottom: 0;">
-      <summary style="font-weight: bold; font-size:1.05rem; cursor: pointer; color:#333;">چه ظرفیت‌هایی بیشترین فروش را دارند؟</summary>
-      <p style="margin-top: 10px; font-size: 0.95rem;">مدل‌های ۵۰۰ و ۱۰۰۰ لیتری بیضی معمولاً برای منازل و ساختمان‌ها مناسب‌ترین انتخاب هستند.</p>
-    </details>
-  </div>
+<div style="max-width: 800px; margin:auto; background:#f9f9f9; padding:40px 24px; border-radius:18px; box-shadow:0 8px 28px rgba(0,0,0,0.06);">
+<h2 class="section-title" style="text-align:center; font-weight:800; font-size:1.6rem; color:#1551a1; margin-bottom:32px;">سوالات متداول درباره مخازن بیضی طبرستان</h2>
+<details style="margin-bottom: 18px; border-bottom:1px solid #ddd; padding-bottom:12px;">
+<summary style="font-weight: bold; font-size:1.05rem; cursor: pointer; color:#333;">مخازن بیضی برای چه مکان‌هایی مناسب هستند؟</summary>
+<p style="margin-top: 10px; font-size: 0.95rem;">این مخازن به‌دلیل ارتفاع کم و طراحی پهن، مناسب نصب در زیر سقف‌های کوتاه، داخل اتاقک، زیرزمین یا پشت‌بام هستند.</p>
+</details>
+<details style="margin-bottom: 18px; border-bottom:1px solid #ddd; padding-bottom:12px;">
+<summary style="font-weight: bold; font-size:1.05rem; cursor: pointer; color:#333;">آیا امکان جابجایی این مخازن به‌سادگی وجود دارد؟</summary>
+<p style="margin-top: 10px; font-size: 0.95rem;">بله، به‌دلیل ارتفاع کم و تعادل بیشتر در هنگام پر شدن، حمل و نصب آن‌ها آسان‌تر از مدل‌های عمودی است.</p>
+</details>
+<details style="margin-bottom: 18px; border-bottom:1px solid #ddd; padding-bottom:12px;">
+<summary style="font-weight: bold; font-size:1.05rem; cursor: pointer; color:#333;">چه تفاوتی با مخازن افقی دارند؟</summary>
+<p style="margin-top: 10px; font-size: 0.95rem;">مخازن بیضی نسبت به مدل‌های افقی پهن‌تر و کم‌ارتفاع‌تر هستند و برای مکان‌هایی که محدودیت در ارتفاع وجود دارد مناسب‌ترند.</p>
+</details>
+<details style="margin-bottom: 0;">
+<summary style="font-weight: bold; font-size:1.05rem; cursor: pointer; color:#333;">چه ظرفیت‌هایی بیشترین فروش را دارند؟</summary>
+<p style="margin-top: 10px; font-size: 0.95rem;">مدل‌های ۵۰۰ و ۱۰۰۰ لیتری بیضی معمولاً برای منازل و ساختمان‌ها مناسب‌ترین انتخاب هستند.</p>
+</details>
+</div>
 </section>
-
-  <footer>
-    <div style="font-size:1.12rem; margin-bottom:13px;">
+<footer>
+<div style="font-size:1.12rem; margin-bottom:6px;">
       نمایندگی رسمی فروش مخازن آب طبرستان در پرند، رباط کریم و تهران
     </div>
-    <ul class="social-icons">
-      <li><a href="#" title="اینستاگرام"><i class="fa fa-instagram"></i></a></li>
-      <li><a href="https://wa.me/989192389894" title="واتساپ"><i class="fa fa-whatsapp"></i></a></li>
-      <li><a href="#" title="تلگرام"><i class="fa fa-telegram"></i></a></li>
-    </ul>
-    <div style="font-size:.97rem;">
-      © طراحی و سئو اختصاصی سایت توسط نمایندگی | هرگونه کپی‌برداری پیگرد قانونی دارد<br>
-      <b>تماس: <a href="tel:09192389894" style="color:#f9f;">09192389894</a></b>
+    <div style="font-size:.92rem; margin-bottom:13px; opacity:.85;">
+      آدرس: شهرک صنعتی پرند، میدان صنعت، بعد از میدان فناوری، گلزار، گل آذین، پلاک ۲۳، قطعه D85
     </div>
-  </footer>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script src="/js/navbarLoader.js"></script>
+<ul class="social-icons">
+<li><a href="#" title="اینستاگرام"><i class="fa fa-instagram"></i></a></li>
+<li><a href="https://wa.me/989192389894" title="واتساپ"><i class="fa fa-whatsapp"></i></a></li>
+<li><a href="#" title="تلگرام"><i class="fa fa-telegram"></i></a></li>
+</ul>
+<div style="font-size:.97rem;">
+      © طراحی و سئو اختصاصی سایت توسط نمایندگی | هرگونه کپی‌برداری پیگرد قانونی دارد<br/>
+<b>تماس: <a href="tel:09192389894" style="color:#f9f;">09192389894</a></b>
+</div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!-- انیمیشن ورود موقع اسکرول -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var targets = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window) || !targets.length) {
+      targets.forEach(function (el) { el.classList.add('is-visible'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    targets.forEach(function (el) { io.observe(el); });
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="/supabaseClient.js"></script>
+<script src="/js/cart.js"></script>
 </body>
 </html>
