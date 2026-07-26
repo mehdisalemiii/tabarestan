@@ -261,21 +261,29 @@
   document.addEventListener('DOMContentLoaded', function () {
     initDrawerMarkup();
     renderDrawerItems();
-    // navbar loads asynchronously (fetched), so poll briefly for the cart button
-    var tries = 0;
-    var poll = setInterval(function () {
-      tries++;
+    bindAddButtons();
+
+    // navbar loads asynchronously (fetched) — به‌جای poll مداوم، فقط وقتی
+    // navbar-container واقعاً پر شد یه بار کار رو انجام می‌دیم (رویدادمحور، سبک‌تر برای CPU)
+    var navContainer = document.getElementById('navbar-container');
+    if (navContainer) {
+      if (document.getElementById('tpc-cart-btn')) {
+        initCartButton();
+        renderBadge();
+      } else {
+        var mo = new MutationObserver(function () {
+          if (document.getElementById('tpc-cart-btn')) {
+            initCartButton();
+            renderBadge();
+            mo.disconnect();
+          }
+        });
+        mo.observe(navContainer, { childList: true, subtree: true });
+      }
+    } else {
       initCartButton();
       renderBadge();
-      if (document.getElementById('tpc-cart-btn') || tries > 40) clearInterval(poll);
-    }, 100);
-    bindAddButtons();
-    // in case add-to-cart buttons are inside the fetched navbar or added later
-    var tries2 = 0;
-    var poll2 = setInterval(function () {
-      tries2++;
-      bindAddButtons();
-      if (tries2 > 40) clearInterval(poll2);
-    }, 150);
+    }
+
   });
 })();
