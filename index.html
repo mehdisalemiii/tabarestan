@@ -2,7 +2,29 @@
 
 <html dir="rtl" lang="fa">
 <head>
-<!-- Google Analytics -->
+<!-- Meta Tags -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>خرید مخزن آب طبرستان | نمایندگی سالمی - پرند، رباط‌کریم، تهران</title>
+<meta content="نمایندگی رسمی سالمی، عرضهٔ مستقیم مخازن پلی‌اتیلن طبرستان (عمودی، افقی، بیضی، مکعبی، زیرپله‌ای و بیشتر) با قیمت مصوب کارخانه و ارسال سریع به پرند، رباط‌کریم و تهران." name="description"/>
+<meta content="مخزن آب, طبرستان, خرید مخزن, فروش مخزن" name="keywords"/>
+<meta content="نمایندگی مخازن آب طبرستان" name="author"/>
+<link href="https://tabarestan.vercel.app/" rel="canonical"/>
+<link href="/images/tabarestan.png" rel="icon" type="image/png"/>
+<!-- Preloads -->
+<link as="image" fetchpriority="high" href="/images/header-banner.webp" rel="preload" type="image/webp"/>
+<link as="style" href="/css/bootstrap.min.css" rel="preload"/>
+<link as="style" href="/css/font-awesome.min.css" rel="preload"/>
+<link as="style" href="/css/style.min.css" rel="preload"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<!-- CSS بحرانی هیرو (blocking عمدی، تا LCP منتظر لود کامل style.min.css نمونه) -->
+<style>
+.main-header-banner{align-items:center;background:url(/images/header-banner.webp) no-repeat 50%;background-size:cover;border-radius:0 0 28px 28px;display:flex;justify-content:center;min-height:390px;position:relative}
+.main-header-banner .overlay{background:rgba(33,60,119,.3);border-radius:0 0 28px 28px;inset:0;position:absolute}
+.banner-content{color:#fff;margin:0 auto;max-width:650px;padding:40px 28px 28px;position:relative;text-align:center;width:100%;z-index:2}
+@media (max-width:900px){.main-header-banner{border-radius:0 0 18px 18px;min-height:330px}.banner-content{padding:18px 7px}}
+</style>
+<!-- Google Analytics (بعد از منابع بحرانی، چون برای اولین رندر لازم نیست) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ERZCH1MVNC"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
@@ -10,21 +32,6 @@
     gtag('js', new Date());
     gtag('config', 'G-ERZCH1MVNC', { page_path: window.location.pathname });
   </script>
-<!-- Meta Tags -->
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>خرید مخزن آب طبرستان | نمایندگی پرند و رباط کریم</title>
-<meta content="خرید انواع مخزن آب طبرستان (افقی، عمودی، بیضی، مکعبی، زیرپله‌ای) با ارسال فوری در تهران، پرند و رباط کریم." name="description"/>
-<meta content="مخزن آب, طبرستان, خرید مخزن, فروش مخزن" name="keywords"/>
-<meta content="نمایندگی مخازن آب طبرستان" name="author"/>
-<link href="https://tabarestan.vercel.app/" rel="canonical"/>
-<link href="/images/tabarestan.png" rel="icon" type="image/png"/>
-<!-- Preloads -->
-<link as="image" href="/images/header-banner.webp" rel="preload" type="image/webp"/>
-<link as="style" href="/css/bootstrap.min.css" rel="preload"/>
-<link as="style" href="/css/font-awesome.min.css" rel="preload"/>
-<link as="style" href="/css/style.min.css" rel="preload"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <!-- CSS غیر مسدود کننده -->
 <link href="/css/bootstrap.min.css" media="print" onload="this.media='all'" rel="stylesheet"/>
 <noscript><link href="/css/bootstrap.min.css" rel="stylesheet"/></noscript>
@@ -657,8 +664,8 @@
     targets.forEach(function (el) { io.observe(el); });
   });
 </script>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-<script src="/supabaseClient.js"></script>
-<script src="/js/cart.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script defer src="/supabaseClient.js"></script>
+<script defer src="/js/cart.js"></script>
 </body>
 </html>
