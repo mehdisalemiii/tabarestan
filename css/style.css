@@ -47,6 +47,7 @@ html {
 @font-face {
   font-family: "Vazir";
   src: url(../fonts/Vazir-Regular.ttf) format("truetype");
+  font-display: optional;
 }
 body {
   margin: 0;
