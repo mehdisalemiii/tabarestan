@@ -46,8 +46,9 @@ html {
 /* 01. General Style */
 @font-face {
   font-family: "Vazir";
-  src: url(../fonts/Vazir-Regular.ttf) format("truetype");
-  font-display: optional;
+  src: url(../fonts/Vazir-Regular.woff2) format("woff2"),
+       url(../fonts/Vazir-Regular.ttf) format("truetype");
+  font-display: swap;
 }
 body {
   margin: 0;
