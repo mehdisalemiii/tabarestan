@@ -49,7 +49,7 @@ html {
   src: url(../fonts/Vazir-Regular.woff2) format("woff2"),
        url(../fonts/Vazir-Regular.ttf) format("truetype");
   font-display: swap;
-}
+ }
 body {
   margin: 0;
   padding: 0;
@@ -2137,11 +2137,16 @@ footer > div:first-of-type {
   flex: 1 1 200px;
 }
 .product-card-blur {
-  width: 320px;
+  flex: 1 1 260px;
+   width: 320px;
   height: 240px;
-  border-radius: 20px;
-  position: relative;
-  overflow: hidden;
+  max-width: 320px;
+  min-height: 260px;
+  height: auto;
+  display: flex;
+   border-radius: 20px;
+   position: relative;
+   overflow: hidden;
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.2);
   background-size: cover;
   background-position: center;
@@ -2165,8 +2170,8 @@ footer > div:first-of-type {
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 100%;
-  padding: 20px;
+  height: auto;
+  padding: 22px 18px;
   z-index: 2;
   color: #fff;
   position: relative;
@@ -2176,17 +2181,28 @@ footer > div:first-of-type {
   font-weight: bold;
 }
 .product-content {
-  z-index: 2;
-  color: #fff;
-  position: relative;
+   z-index: 2;
+   color: #fff;
+   position: relative;
   padding: 20px;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
+  padding: 22px 18px;
+  width: 100%;
+  height: auto;
+   display: flex;
+   flex-direction: column;
+  align-items: center;
+   justify-content: center;
+  gap: 6px;
+   text-align: center;
+  overflow-wrap: anywhere;
 }
-
+.product-content .btn-tel,
+.product-content .add-to-cart-btn {
+  margin-top: 6px;
+  max-width: 100%;
+ }
+ 
 .product-content h4 {
   font-size: 1.3rem;
   font-weight: bold;
@@ -2221,7 +2237,8 @@ footer > div:first-of-type {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
+  align-items: stretch;
+  gap: 20px;
   margin: 32px auto 64px;
   padding: 0 16px;
 }
