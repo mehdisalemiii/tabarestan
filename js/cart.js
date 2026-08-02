@@ -112,19 +112,25 @@
     });
   }
 
+  var isOpen = false;
+
   function openDrawer() {
     var overlay = document.getElementById('tpc-cart-overlay');
     var drawer = document.getElementById('tpc-cart-drawer');
     if (overlay) overlay.classList.add('is-open');
     if (drawer) drawer.classList.add('is-open');
-    document.body.style.overflow = 'hidden';
+    document.documentElement.classList.add('tpc-scroll-lock');
+    document.body.classList.add('tpc-scroll-lock');
+    isOpen = true;
   }
   function closeDrawer() {
     var overlay = document.getElementById('tpc-cart-overlay');
     var drawer = document.getElementById('tpc-cart-drawer');
     if (overlay) overlay.classList.remove('is-open');
     if (drawer) drawer.classList.remove('is-open');
-    document.body.style.overflow = '';
+    document.documentElement.classList.remove('tpc-scroll-lock');
+    document.body.classList.remove('tpc-scroll-lock');
+    isOpen = false;
   }
 
   function buildWhatsAppMessage(name, phone, city, notes) {
@@ -145,14 +151,14 @@
       var supabase = window.supabaseClient;
       if (!supabase) return { ok: false, reason: 'no-client' };
       var items = cart.map(function (i) { return { title: i.title, specs: i.specs, code: i.code, qty: i.qty }; });
-      var { error } = await supabase.from('orders').insert([{
+      var res = await supabase.from('orders').insert([{
         full_name: name || null,
         phone: phone || null,
         city: city || null,
         notes: notes || null,
         items: items
       }]);
-      if (error) return { ok: false, reason: error.message };
+      if (res.error) return { ok: false, reason: res.error.message };
       return { ok: true };
     } catch (e) {
       return { ok: false, reason: 'exception' };
@@ -165,11 +171,13 @@
     var overlay = document.createElement('div');
     overlay.id = 'tpc-cart-overlay';
     overlay.className = 'tpc-cart-overlay';
+    overlay.style.zIndex = '2147483000';
     overlay.addEventListener('click', closeDrawer);
 
     var drawer = document.createElement('aside');
     drawer.id = 'tpc-cart-drawer';
     drawer.className = 'tpc-cart-drawer';
+    drawer.style.zIndex = '2147483001';
     drawer.innerHTML =
       '<div class="tpc-cart-header">' +
         '<h3>سبد سفارش شما</h3>' +
@@ -198,6 +206,20 @@
     document.body.appendChild(drawer);
 
     document.getElementById('tpc-cart-close').addEventListener('click', closeDrawer);
+
+    // شبکهٔ ایمنی: کلیک هرجای بیرون کشو، وقتی بازه، می‌بندتش —
+    // حتی اگه یه استایل دیگه روی دکمهٔ بستن بشینه و کلیکش نرسه
+    document.addEventListener('click', function (e) {
+      if (!isOpen) return;
+      var d = document.getElementById('tpc-cart-drawer');
+      var b = document.getElementById('tpc-cart-btn');
+      if (d && !d.contains(e.target) && (!b || !b.contains(e.target))) closeDrawer();
+    }, true);
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && isOpen) closeDrawer();
+    });
+
     document.getElementById('tpc-cart-submit').addEventListener('click', async function () {
       var name = document.getElementById('tpc-cart-name').value.trim();
       var phone = document.getElementById('tpc-cart-phone').value.trim();
@@ -237,8 +259,12 @@
 
   function initCartButton() {
     var btn = document.getElementById('tpc-cart-btn');
-    if (btn) {
-      btn.addEventListener('click', openDrawer);
+    if (btn && !btn.dataset.tpcBound) {
+      btn.dataset.tpcBound = '1';
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        if (isOpen) closeDrawer(); else openDrawer();
+      });
     }
   }
 
@@ -259,12 +285,14 @@
   }
 
   document.addEventListener('DOMContentLoaded', function () {
+    // شبکهٔ ایمنی: هر بار صفحه از نو لود می‌شه، مطمئن شو قفل اسکرول از قبل نمونده
+    document.documentElement.classList.remove('tpc-scroll-lock');
+    document.body.classList.remove('tpc-scroll-lock');
+
     initDrawerMarkup();
     renderDrawerItems();
     bindAddButtons();
 
-    // navbar loads asynchronously (fetched) — به‌جای poll مداوم، فقط وقتی
-    // navbar-container واقعاً پر شد یه بار کار رو انجام می‌دیم (رویدادمحور، سبک‌تر برای CPU)
     var navContainer = document.getElementById('navbar-container');
     if (navContainer) {
       if (document.getElementById('tpc-cart-btn')) {
@@ -284,6 +312,5 @@
       initCartButton();
       renderBadge();
     }
-
   });
 })();
