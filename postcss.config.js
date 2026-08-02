@@ -8,8 +8,18 @@ module.exports = {
     purgecss({
       content: [
         './*.html',
-        './categories/**/*.html'
+        './categories/**/*.html',
+        './marketing/**/*.html',
+        './*.js',
+        './js/**/*.js',
+        './utils/**/*.js'
       ],
+      // کلاس‌هایی که با جاوااسکریپت ساخته می‌شوند
+      safelist: {
+        standard: [/^tpc-/, /^is-/, /^open$/, /^show$/, /^in$/, /^active$/, /^collapse/, /^fade/],
+        deep: [/^tpc-/],
+        greedy: [/^tpc-/]
+      },
       defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
     }),
     cssnano({ preset: 'default' })
