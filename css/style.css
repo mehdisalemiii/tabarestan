@@ -2832,3 +2832,4 @@ body {
 @media (max-width: 480px) {
   .tpc-cart-drawer { width: 92vw; }
 }
+html.tpc-scroll-lock, body.tpc-scroll-lock { overflow: hidden !important; }
