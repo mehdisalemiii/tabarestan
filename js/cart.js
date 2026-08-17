@@ -15,6 +15,14 @@
 
   var cart = readCart();
 
+  function trackEvent(name, params) {
+    try {
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', name, params || {});
+      }
+    } catch (e) {}
+  }
+
   function findIndex(id) {
     for (var i = 0; i < cart.length; i++) if (cart[i].id === id) return i;
     return -1;
@@ -33,6 +41,12 @@
     renderDrawerItems();
     openDrawer();
     pulseCartIcon();
+    trackEvent('add_to_cart', {
+      item_id: item.id,
+      item_name: item.title,
+      item_category: document.title,
+      page_location: window.location.href
+    });
   }
 
   function updateQty(id, delta) {
@@ -250,6 +264,15 @@
       }
       statusEl.className = 'tpc-cart-status tpc-cart-status-ok';
 
+      var itemCount = totalCount();
+      trackEvent('generate_lead', {
+        currency: 'IRR',
+        value: itemCount,
+        items_count: itemCount,
+        city: city || 'نامشخص',
+        method: result.ok ? 'whatsapp_and_supabase' : 'whatsapp_only'
+      });
+
       cart = [];
       writeCart(cart);
       renderBadge();
@@ -312,5 +335,17 @@
       initCartButton();
       renderBadge();
     }
+
+    // ردیابی کلیک روی دکمهٔ شناور واتساپ و لینک‌های تماس/واتساپ داخل صفحه
+    document.querySelectorAll('.whatsapp-float, a[href^="https://wa.me/"], a[href^="tel:"]').forEach(function (el) {
+      if (el.dataset.tpcTracked) return;
+      el.dataset.tpcTracked = '1';
+      el.addEventListener('click', function () {
+        var isTel = el.getAttribute('href') && el.getAttribute('href').indexOf('tel:') === 0;
+        trackEvent(isTel ? 'contact_phone_click' : 'contact_whatsapp_click', {
+          page_location: window.location.href
+        });
+      });
+    });
   });
 })();
