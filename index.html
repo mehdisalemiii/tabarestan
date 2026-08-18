@@ -14,8 +14,8 @@
 <link as="image" fetchpriority="high" href="/images/header-banner-640.webp" media="(max-width:640px)" rel="preload" type="image/webp"/>
 <link as="image" fetchpriority="high" href="/images/header-banner-900.webp" media="(min-width:641px) and (max-width:900px)" rel="preload" type="image/webp"/>
 <link as="image" fetchpriority="high" href="/images/header-banner-1536.webp" media="(min-width:901px)" rel="preload" type="image/webp"/>
-<link as="style" href="/css/bootstrap.slim.css?v=2" rel="preload"/>
-<link as="style" href="/css/style.min.css?v=2" rel="preload"/>
+<link as="style" href="/css/bootstrap.slim.css?v=3" rel="preload"/>
+<link as="style" href="/css/style.min.css?v=3" rel="preload"/>
 <link as="font" crossorigin="" href="/fonts/Vazir-Regular.woff2" rel="preload" type="font/woff2"/>
 <!-- CSS بحرانی هیرو (blocking عمدی، تا LCP منتظر لود کامل style.min.css نمونه) -->
 <style>
@@ -29,596 +29,556 @@
 <!-- Google Analytics (بعد از منابع بحرانی، چون برای اولین رندر لازم نیست) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ERZCH1MVNC"></script>
 <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-ERZCH1MVNC', { page_path: window.location.pathname });
-  </script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ERZCH1MVNC', { page_path: window.location.pathname });
+</script>
 <!-- CSS -->
-<link href="/css/bootstrap.slim.css?v=2" rel="stylesheet"/>
-<link href="/css/style.min.css?v=2" rel="stylesheet"/>
+<link href="/css/bootstrap.slim.css?v=3" rel="stylesheet"/>
+<link href="/css/style.min.css?v=3" rel="stylesheet"/>
 <!-- Structured Data -->
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "نمایندگی مخازن طبرستان",
-  "url": "https://tabarestan.vercel.app/",
-  "logo": "https://tabarestan.vercel.app/images/tabarestan.png",
-  "contactPoint": [
-    {
-      "@type": "ContactPoint",
-      "telephone": "+989192389894",
-      "contactType": "customer service"
-    }
-  ]
+"@context": "https://schema.org",
+"@type": "Organization",
+"name": "نمایندگی مخازن طبرستان",
+"url": "https://tabarestan.vercel.app/",
+"logo": "https://tabarestan.vercel.app/images/tabarestan.png",
+"contactPoint": [
+{
+"@type": "ContactPoint",
+"telephone": "+989192389894",
+"contactType": "customer service"
+}
+]
 }
 </script>
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "چرا مخزن طبرستان بهترین انتخاب است؟",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "مواد اولیه فودگرید، تولید آنتی‌باکتریال، گارانتی شرکتی و نشان استاندارد ملی."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "ارسال مخزن آب چطور انجام می‌شود؟",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "ارسال فوری با وانت، کامیونت یا تیپاکس به سراسر کشور و شهرک‌های صنعتی."
-      }
-    }
-  ]
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "چرا مخزن طبرستان بهترین انتخاب است؟",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "مواد اولیه فودگرید، تولید آنتی‌باکتریال، گارانتی شرکتی و نشان استاندارد ملی."
+}
+},
+{
+"@type": "Question",
+"name": "ارسال مخزن آب چطور انجام می‌شود؟",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "ارسال فوری با وانت، کامیونت یا تیپاکس به سراسر کشور و شهرک‌های صنعتی."
+}
+}
+]
 }
 </script>
 <style>
-    body { font-family: 'Vazir', Tahoma, Arial, sans-serif; background:#f7fafd; margin:0; }
-    .main-header {
-      display:flex; flex-direction:column; align-items:center; justify-content:center;
-      min-height:50vh; background: linear-gradient(120deg,#e3f0fd 0%,#fff 100%);
-      border-radius:18px; margin:40px 0 0 0; box-shadow:0 4px 18px rgba(21,81,161,.08); padding:32px 10px;
-    }
-    .main-header img { width:115px; margin-bottom:10px;}
-    .main-header h1 { font-size:2.1rem; color:#1551a1; margin-bottom:10px; font-weight: bold;}
-    .main-header .lead { color:#212; margin-bottom:18px; font-size:1.09rem;}
-    .cta-btn {
-      background:#23a124; color:#fff; border:none; padding:11px 28px; border-radius:25px;
-      font-size:1.08rem; margin:8px; font-weight:600; box-shadow:0 2px 8px #2175d91a;
-      transition: background 0.22s;
-      display:inline-block;
-    }
-    .cta-btn.primary { background:#1551a1; }
-    .cta-btn:hover { background:#187917; color:#fff;}
-    .products-row {
-      display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin:32px 0 0 0;
-    }
-    .product-card {
-      min-width:190px; max-width:255px; background:#fff; border:1px solid #e5e5e5;
-      border-radius:14px; padding:18px 8px; text-align:center;
-      box-shadow:0 2px 7px #1551a10d; transition:transform .14s;
-      position:relative;
-      flex:1 1 200px;
-    }
-    .product-card:hover { transform: translateY(-7px) scale(1.04); border-color:#1551a1;}
-    .product-card .product-volume { font-size:1.13rem; color:#1551a1; font-weight:700;}
-    .product-card .product-feature { color:#23a124; font-size:.99rem;}
-    .product-card .product-size { font-size:.93rem; color:#555;}
-    .product-card .tank-code { font-size:.91rem; color:#999;}
-    .product-card .buy-btn {
-      background:#1551a1; color:#fff; padding:7px 19px; border-radius:15px;
-      font-size:.98rem; border:none; margin-top:7px; cursor:pointer; transition:background .16s;
-    }
-    .product-card .buy-btn:hover { background:#23a124;}
-    @media (max-width:900px) {
-      .main-header { min-height:34vh; }
-      .products-row { flex-direction:column; gap:14px;}
-      .product-card { max-width:97%; margin:auto;}
-    }
-
-    /* ===== انیمیشن ورود موقع اسکرول ===== */
-    .reveal {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1);
-    }
-    .reveal.is-visible { opacity: 1; transform: translateY(0); }
-
-    /* ===== ورود پلکانی هیرو ===== */
-    .banner-content > * { opacity: 0; animation: heroFadeUp .8s ease forwards; }
-    .banner-content h1 { animation-delay: .1s; }
-    .banner-content ul { animation-delay: .28s; }
-    .banner-content .cta-btn { animation-delay: .46s; }
-    .banner-content .banner-logo-row { animation-delay: .62s; }
-    .banner-content .banner-phone { animation-delay: .76s; }
-    @keyframes heroFadeUp {
-      from { opacity:0; transform: translateY(16px); }
-      to   { opacity:1; transform: translateY(0); }
-    }
-
-    /* ===== میکرو-اینترکشن کارت‌های محصول پرفروش ===== */
-    .product-card-blur { transition: transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s ease; }
-    .product-card-blur:hover { transform: translateY(-10px) scale(1.015); }
-
-    /* ===== میکرو-اینترکشن دکمه‌ها ===== */
-    .cta-btn, .buy-btn, .btn-tel { transition: transform .35s cubic-bezier(.22,1,.36,1), background .2s ease, box-shadow .3s ease; }
-    .cta-btn:active, .buy-btn:active, .btn-tel:active { transform: scale(.95); }
-    .cta-btn:hover { box-shadow: 0 8px 20px rgba(21,81,161,.25); }
-
-    @media (prefers-reduced-motion: reduce) {
-      .reveal, .banner-content > * { animation: none !important; transition: none !important; opacity: 1 !important; transform: none !important; }
-    }
-
-    /* Catalog Gallery */
-    .catalog-section { max-width:1150px; margin:50px auto 0 auto; }
-    .catalog-grid {
-      display:grid; grid-template-columns:repeat(2,1fr); gap:38px; justify-items:center; align-items:center;
-    }
-    .catalog-grid figure { margin:0; text-align:center; }
-    .catalog-grid img.catalog-img {
-      width:100%; max-width:510px; border-radius:18px; box-shadow:0 2px 16px #bbb7;
-      cursor:pointer; transition: box-shadow .19s;
-    }
-    .catalog-grid img.catalog-img:hover { box-shadow:0 4px 32px #18791799; }
-    .catalog-grid figcaption { margin-top:10px; font-weight:600; font-size:18px; color:#1551a1;}
-    @media (max-width:900px) {
-      .catalog-grid { grid-template-columns:1fr; }
-      .catalog-grid figure img { max-width:98vw !important; }
-    }
-    .cta-btn.download { background:#1551a1; margin-top:25px;}
-    .cta-btn.download:hover { background:#187917;}
-
-    /* Footer */
-    footer {
-      margin-top:45px; background:#1551a1; color:#fff; padding:26px 0 18px 0; text-align:center;
-    }
-    .social-icons { list-style:none; padding:0; margin:0 0 16px 0; display:flex; justify-content:center; gap:14px;}
-    .social-icons li { display:inline-block;}
-    .social-icons li a { color:#fff; font-size:1.38em; transition:color .2s;}
-    .social-icons li a:hover { color:#23a124;}
-
-    /* Popup */
-    #catalog-popup {
-      display:none;position:fixed;z-index:9999;inset:0;background:rgba(20,30,40,0.95);justify-content:center;align-items:center;
-    }
-    #catalog-popup-close {
-      position:absolute;top:34px;left:38px;font-size:48px;color:#fff;cursor:pointer;font-family:sans-serif;z-index:10001;
-    }
-    #catalog-popup-img { max-width:94vw;max-height:85vh;border-radius:17px;box-shadow:0 0 40px #222b;transition:.2s;}
-
-    @media (max-width:600px) {
-      .main-header img { width:90px;}
-      .main-header h1 { font-size:1.15rem;}
-      .catalog-grid figcaption { font-size:15px;}
-      #catalog-popup-img { max-width:98vw;}
-    }
+body { font-family: 'Vazir', Tahoma, Arial, sans-serif; background:#f7fafd; margin:0; }
+.main-header {
+display:flex; flex-direction:column; align-items:center; justify-content:center;
+min-height:50vh; background: linear-gradient(120deg,#e3f0fd 0%,#fff 100%);
+border-radius:18px; margin:40px 0 0 0; box-shadow:0 4px 18px rgba(21,81,161,.08); padding:32px 10px;
+}
+.main-header img { width:115px; margin-bottom:10px;}
+.main-header h1 { font-size:2.1rem; color:#1551a1; margin-bottom:10px; font-weight: bold;}
+.main-header .lead { color:#212; margin-bottom:18px; font-size:1.09rem;}
+.cta-btn {
+background:#23a124; color:#fff; border:none; padding:11px 28px; border-radius:25px;
+font-size:1.08rem; margin:8px; font-weight:600; box-shadow:0 2px 8px #2175d91a;
+transition: background 0.22s;
+display:inline-block;
+}
+.cta-btn.primary { background:#1551a1; }
+.cta-btn:hover { background:#187917; color:#fff;}
+.products-row {
+display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin:32px 0 0 0;
+}
+.product-card {
+min-width:190px; max-width:255px; background:#fff; border:1px solid #e5e5e5;
+border-radius:14px; padding:18px 8px; text-align:center;
+box-shadow:0 2px 7px #1551a10d; transition:transform .14s;
+position:relative;
+flex:1 1 200px;
+}
+.product-card:hover { transform: translateY(-7px) scale(1.04); border-color:#1551a1;}
+.product-card .product-volume { font-size:1.13rem; color:#1551a1; font-weight:700;}
+.product-card .product-feature { color:#23a124; font-size:.99rem;}
+.product-card .product-size { font-size:.93rem; color:#555;}
+.product-card .tank-code { font-size:.91rem; color:#999;}
+.product-card .buy-btn {
+background:#1551a1; color:#fff; padding:7px 19px; border-radius:15px;
+font-size:.98rem; border:none; margin-top:7px; cursor:pointer; transition:background .16s;
+}
+.product-card .buy-btn:hover { background:#23a124;}
+@media (max-width:900px) {
+.main-header { min-height:34vh; }
+.products-row { flex-direction:column; gap:14px;}
+.product-card { max-width:97%; margin:auto;}
+}
+/* ===== انیمیشن ورود موقع اسکرول ===== */
+.reveal {
+opacity: 0;
+transform: translateY(28px);
+transition: opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1);
+}
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+/* ===== ورود پلکانی هیرو ===== */
+.banner-content > * { opacity: 0; animation: heroFadeUp .8s ease forwards; }
+.banner-content h1 { animation-delay: .1s; }
+.banner-content ul { animation-delay: .28s; }
+.banner-content .cta-btn { animation-delay: .46s; }
+.banner-content .banner-logo-row { animation-delay: .62s; }
+.banner-content .banner-phone { animation-delay: .76s; }
+@keyframes heroFadeUp {
+from { opacity:0; transform: translateY(16px); }
+to { opacity:1; transform: translateY(0); }
+}
+/* ===== میکرو-اینترکشن کارت‌های محصول پرفروش ===== */
+.product-card-blur { transition: transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s ease; }
+.product-card-blur:hover { transform: translateY(-10px) scale(1.015); }
+/* ===== میکرو-اینترکشن دکمه‌ها ===== */
+.cta-btn, .buy-btn, .btn-tel { transition: transform .35s cubic-bezier(.22,1,.36,1), background .2s ease, box-shadow .3s ease; }
+.cta-btn:active, .buy-btn:active, .btn-tel:active { transform: scale(.95); }
+.cta-btn:hover { box-shadow: 0 8px 20px rgba(21,81,161,.25); }
+@media (prefers-reduced-motion: reduce) {
+.reveal, .banner-content > * { animation: none !important; transition: none !important; opacity: 1 !important; transform: none !important; }
+}
+/* Catalog Gallery */
+.catalog-section { max-width:1150px; margin:50px auto 0 auto; }
+.catalog-grid {
+display:grid; grid-template-columns:repeat(2,1fr); gap:38px; justify-items:center; align-items:center;
+}
+.catalog-grid figure { margin:0; text-align:center; }
+.catalog-grid img.catalog-img {
+width:100%; max-width:510px; border-radius:18px; box-shadow:0 2px 16px #bbb7;
+cursor:pointer; transition: box-shadow .19s;
+}
+.catalog-grid img.catalog-img:hover { box-shadow:0 4px 32px #18791799; }
+.catalog-grid figcaption { margin-top:10px; font-weight:600; font-size:18px; color:#1551a1;}
+@media (max-width:900px) {
+.catalog-grid { grid-template-columns:1fr; }
+.catalog-grid figure img { max-width:98vw !important; }
+}
+/* Footer */
+footer {
+margin-top:45px; background:#1551a1; color:#fff; padding:26px 0 18px 0; text-align:center;
+}
+.social-icons { list-style:none; padding:0; margin:0 0 16px 0; display:flex; justify-content:center; gap:14px;}
+.social-icons li { display:inline-block;}
+.social-icons li a { color:#fff; font-size:1.38em; transition:color .2s;}
+.social-icons li a:hover { color:#23a124;}
+/* Popup */
+#catalog-popup {
+display:none;position:fixed;z-index:9999;inset:0;background:rgba(20,30,40,0.95);justify-content:center;align-items:center;
+}
+#catalog-popup-close {
+position:absolute;top:34px;left:38px;font-size:48px;color:#fff;cursor:pointer;font-family:sans-serif;z-index:10001;
+}
+#catalog-popup-img { max-width:94vw;max-height:85vh;border-radius:17px;box-shadow:0 0 40px #222b;transition:.2s;}
+@media (max-width:600px) {
+.main-header img { width:90px;}
+.main-header h1 { font-size:1.15rem;}
+.catalog-grid figcaption { font-size:15px;}
+#catalog-popup-img { max-width:98vw;}
+}
 </style>
 </head>
 <body>
 <!-- Back to top -->
 <a class="back-to-top" href="#" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">
-  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8l-8 8h16z"/></svg>
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8l-8 8h16z"/></svg>
 </a>
-
 <!-- Navbar placeholder -->
 <div id="navbar-container"></div>
-
 <main>
 <!-- هدر مینیمال و حرفه‌ای -->
-<!-- header section: جایگزین با بخش هدر قبلی -->
 <section class="main-header-banner">
-  <div class="overlay"></div>
-  <div class="banner-content">
-    <h1>فروش مخازن پلاستیکی</h1>
-    <ul>
-      <li>مقاوم در برابر نور خورشید و جلبک</li>
-      <li>دارای بدنه با ضخامت، ابعاد و اشکال متنوع</li>
-      <li>تک لایه، سه لایه و چهار لایه</li>
-    </ul>
-    <a class="cta-btn" href="shop.html">مشاهده محصولات</a>
-    <div class="banner-logo-row">
-      <img alt="لوگو طبرستان" height="92" src="images/tabarestan-logo.svg" width="92"/>
-      <span class="banner-logo-caption">نمایندگی رسمی فروش مخازن طبرستان</span>
-    </div>
-    <div class="banner-phone">
-      <b>سالمی: </b> <a href="tel:09192389894">09192389894</a>
-    </div>
-  </div>
+<div class="overlay"></div>
+<div class="banner-content">
+<h1>فروش مخازن پلاستیکی</h1>
+<ul>
+<li>مقاوم در برابر نور خورشید و جلبک</li>
+<li>دارای بدنه با ضخامت، ابعاد و اشکال متنوع</li>
+<li>تک لایه، سه لایه و چهار لایه</li>
+</ul>
+<a class="cta-btn" href="shop.html">مشاهده محصولات</a>
+<div class="banner-logo-row">
+<img alt="لوگو طبرستان" height="92" src="images/tabarestan-logo.svg" width="92"/>
+<span class="banner-logo-caption">نمایندگی رسمی فروش مخازن طبرستان</span>
+</div>
+<div class="banner-phone">
+<b>سالمی: </b> <a href="tel:09192389894">09192389894</a>
+</div>
+</div>
 </section>
-
 <!-- محصولات پرفروش -->
 <section style="margin-top:36px;">
-  <h2 class="section-title">پرفروش‌ترین محصولات مخزن آب طبرستان</h2>
-  <div class="featured-products">
-    <div class="product-card-blur reveal" style="background-image:url('images/categories/vertical.webp')">
-      <div class="product-content">
-        <h4>۱۰۰۰ لیتر عمودی</h4>
-        <p>کد: 1131351</p>
-        <p>ارتفاع: 142cm | قطر: 105cm</p>
-        <p>سه لایه آنتی‌باکتریال</p>
-        <a class="btn-tel" href="tel:09192389894">سفارش تلفنی</a>
-        <button class="add-to-cart-btn" data-code="1131351" data-id="1131351" data-specs="ارتفاع: 142cm | قطر: 105cm | سه لایه آنتی‌باکتریال" data-title="۱۰۰۰ لیتر عمودی" type="button">+ افزودن به سبد</button>
-      </div>
-    </div>
-    <div class="product-card-blur reveal" style="background-image: url('images/categories/horizontal.webp');">
-      <div class="product-content">
-        <h4>۲۰۰۰ لیتر افقی</h4>
-        <p>کد: 1031421</p>
-        <p>ارتفاع: 135.5cm | طول: 193cm</p>
-        <p>ضد جلبک | مقاوم فضای باز</p>
-        <a class="btn-tel" href="tel:09192389894">سفارش تلفنی</a>
-        <button class="add-to-cart-btn" data-code="1031421" data-id="1031421" data-specs="ارتفاع: 135.5cm | طول: 193cm | ضد جلبک | مقاوم فضای باز" data-title="۲۰۰۰ لیتر افقی" type="button">+ افزودن به سبد</button>
-      </div>
-    </div>
-    <div class="product-card-blur reveal" style="background-image: url('images/categories/cubic.webp');">
-      <div class="product-content">
-        <h4>۵۰۰ لیتری مکعبی</h4>
-        <p>کد: 1431241</p>
-        <p>ارتفاع: 44cm | طول: 150cm | عرض: 61cm</p>
-        <p>کم‌جا و آنتی‌باکتریال</p>
-        <a class="btn-tel" href="tel:09192389894">سفارش تلفنی</a>
-        <button class="add-to-cart-btn" data-code="1431241" data-id="1431241" data-specs="ارتفاع: 44cm | طول: 150cm | عرض: 61cm | کم‌جا و آنتی‌باکتریال" data-title="۵۰۰ لیتری مکعبی" type="button">+ افزودن به سبد</button>
-      </div>
-    </div>
-    <div class="product-card-blur reveal" style="background-image: url('images/categories/oval.webp');">
-      <div class="product-content">
-        <h4>۳۰۰۰ لیتری بیضی</h4>
-        <p>کد: 3331441</p>
-        <p>ارتفاع: 110.5cm | طول: 222cm | عرض: 147cm</p>
-        <p>ضد جلبک | ظرفیت بالا</p>
-        <a class="btn-tel" href="tel:09192389894">سفارش تلفنی</a>
-        <button class="add-to-cart-btn" data-code="3331441" data-id="3331441" data-specs="ارتفاع: 110.5cm | طول: 222cm | عرض: 147cm | ضد جلبک | ظرفیت بالا" data-title="۳۰۰۰ لیتری بیضی" type="button">+ افزودن به سبد</button>
-      </div>
-    </div>
-  </div>
-  <div class="cta-wrapper" style="text-align:center; margin-top:32px;">
-    <a class="cta-btn primary" href="shop.html">مشاهده همه محصولات</a>
-  </div>
+<h2 class="section-title">پرفروش‌ترین محصولات مخزن آب طبرستان</h2>
+<div class="featured-products">
+<div class="product-card-blur reveal" style="background-image:url('images/categories/vertical.webp')">
+<div class="product-content">
+<h4>۱۰۰۰ لیتر عمودی</h4>
+<p>کد: 1131351</p>
+<p>ارتفاع: 142cm | قطر: 105cm</p>
+<p>سه لایه آنتی‌باکتریال</p>
+<a class="btn-tel" href="tel:09192389894">سفارش تلفنی</a>
+<button class="add-to-cart-btn" data-code="1131351" data-id="1131351" data-specs="ارتفاع: 142cm | قطر: 105cm | سه لایه آنتی‌باکتریال" data-title="۱۰۰۰ لیتر عمودی" type="button">+ افزودن به سبد</button></div>
+</div>
+<div class="product-card-blur reveal" style="background-image: url('images/categories/horizontal.webp');">
+<div class="product-content">
+<h4>۲۰۰۰ لیتر افقی</h4>
+<p>کد: 1031421</p>
+<p>ارتفاع: 135.5cm | طول: 193cm</p>
+<p>ضد جلبک | مقاوم فضای باز</p>
+<a class="btn-tel" href="tel:09192389894">سفارش تلفنی</a>
+<button class="add-to-cart-btn" data-code="1031421" data-id="1031421" data-specs="ارتفاع: 135.5cm | طول: 193cm | ضد جلبک | مقاوم فضای باز" data-title="۲۰۰۰ لیتر افقی" type="button">+ افزودن به سبد</button></div>
+</div>
+<div class="product-card-blur reveal" style="background-image: url('images/categories/cubic.webp');">
+<div class="product-content">
+<h4>۵۰۰ لیتری مکعبی</h4>
+<p>کد: 1431241</p>
+<p>ارتفاع: 44cm | طول: 150cm | عرض: 61cm</p>
+<p>کم‌جا و آنتی‌باکتریال</p>
+<a class="btn-tel" href="tel:09192389894">سفارش تلفنی</a>
+<button class="add-to-cart-btn" data-code="1431241" data-id="1431241" data-specs="ارتفاع: 44cm | طول: 150cm | عرض: 61cm | کم‌جا و آنتی‌باکتریال" data-title="۵۰۰ لیتری مکعبی" type="button">+ افزودن به سبد</button></div>
+</div>
+<div class="product-card-blur reveal" style="background-image: url('images/categories/oval.webp');">
+<div class="product-content">
+<h4>۳۰۰۰ لیتری بیضی</h4>
+<p>کد: 3331441</p>
+<p>ارتفاع: 110.5cm | طول: 222cm | عرض: 147cm</p>
+<p>ضد جلبک | ظرفیت بالا</p>
+<a class="btn-tel" href="tel:09192389894">سفارش تلفنی</a>
+<button class="add-to-cart-btn" data-code="3331441" data-id="3331441" data-specs="ارتفاع: 110.5cm | طول: 222cm | عرض: 147cm | ضد جلبک | ظرفیت بالا" data-title="۳۰۰۰ لیتری بیضی" type="button">+ افزودن به سبد</button></div>
+</div>
+</div>
+<div class="cta-wrapper" style="text-align:center; margin-top:32px;">
+<a class="cta-btn primary" href="shop.html">مشاهده همه محصولات</a>
+</div>
 </section>
-
 <h2 class="section-title" style="
-  text-align: center;
-  font-size: 1.85rem;
-  font-weight: bold;
-  color: #1551a1;
-  margin: 56px auto 24px;
-  position: relative;
+text-align: center;
+font-size: 1.85rem;
+font-weight: bold;
+color: #1551a1;
+margin: 56px auto 24px;
+position: relative;
 ">
-  چرا مخزن آب طبرستان؟
-  <span style="
-    content: '';
-    display: block;
-    width: 50px;
-    height: 3px;
-    background: #1551a1;
-    margin: 12px auto 0;
-    border-radius: 3px;
-    opacity: 0.5;
-  "></span>
+چرا مخزن آب طبرستان؟
+<span style="
+content: '';
+display: block;
+width: 50px;
+height: 3px;
+background: #1551a1;
+margin: 12px auto 0;
+border-radius: 3px;
+opacity: 0.5;
+"></span>
 </h2>
-
 <!-- مزیت‌ها و اعتمادسازی -->
 <section class="reveal" style="max-width: 900px; margin: 64px auto; padding: 32px 24px; background: #fff; border-radius: 20px; box-shadow: 0 4px 24px rgba(0,0,0,0.06); font-family: 'Vazir', Tahoma, sans-serif; direction: rtl;">
-  <ul style="list-style: none; padding: 0; font-size: 1.1rem; line-height: 2.15; color: #222;">
-    <li style="margin-bottom: 10px;">✅ دارای استاندارد ملی ایران و تأییدیه بهداشت برای نگهداری آب شرب</li>
-    <li style="margin-bottom: 10px;">✅ تولید شده از مواد پلی‌اتیلن فودگرید و کاملاً آنتی‌باکتریال، ضد جلبک و مقاوم به نور خورشید</li>
-    <li style="margin-bottom: 10px;">✅ قابل سفارش در مدل‌های عمودی، افقی، مکعبی، زیرپله‌ای، بیضی و آسان‌رو</li>
-    <li style="margin-bottom: 10px;">✅ تنوع ابعاد و حجم از ۵۰ تا ۲۰٬۰۰۰ لیتر، مناسب برای خانه، باغ، صنعت و ساختمان</li>
-    <li style="margin-bottom: 10px;">✅ دارای گارانتی رسمی طبرستان و خدمات پس از فروش معتبر</li>
-    <li style="margin-bottom: 10px;">✅ ارسال فوری به تهران، پرند، رباط کریم و سراسر ایران</li>
-    <li style="margin-top: 18px; font-weight: 800; color: #23a124;">📞 مشاوره تخصصی: 09192389894</li>
-  </ul>
+<ul style="list-style: none; padding: 0; font-size: 1.1rem; line-height: 2.15; color: #222;">
+<li style="margin-bottom: 10px;">✅ دارای استاندارد ملی ایران و تأییدیه بهداشت برای نگهداری آب شرب</li>
+<li style="margin-bottom: 10px;">✅ تولید شده از مواد پلی‌اتیلن فودگرید و کاملاً آنتی‌باکتریال، ضد جلبک و مقاوم به نور خورشید</li>
+<li style="margin-bottom: 10px;">✅ قابل سفارش در مدل‌های عمودی، افقی، مکعبی، زیرپله‌ای، بیضی و آسان‌رو</li>
+<li style="margin-bottom: 10px;">✅ تنوع ابعاد و حجم از ۵۰ تا ۴۰,۰۰۰ لیتر، مناسب برای خانه، باغ، صنعت و ساختمان</li>
+<li style="margin-bottom: 10px;">✅ دارای گارانتی رسمی طبرستان و خدمات پس از فروش معتبر</li>
+<li style="margin-bottom: 10px;">✅ ارسال فوری به تهران، پرند، رباط کریم و سراسر ایران</li>
+<li style="margin-top: 18px; font-weight: 800; color: #23a124;">📞 مشاوره تخصصی: 09192389894</li>
+</ul>
 </section>
-
 <!-- بخش FAQ سئوشده -->
 <section id="faq" style="margin: 60px auto 0; max-width: 700px; background: #fff; border-radius: 18px; box-shadow: 0 2px 12px #2175d917; padding: 32px 16px;">
-  <h2 style="color:#1551a1; font-size:1.53rem; text-align:center; font-weight:900; margin-bottom: 25px; letter-spacing: -1px;">
-    سوالات پرتکرار درباره مخزن آب طبرستان
-  </h2>
-  <div class="faq-list">
-    <!-- سوال ۱ -->
-    <div class="faq-item reveal">
-      <button aria-expanded="false" class="faq-question">
-        <span class="q-title">چه حجمی برای منزل یا آپارتمان من مناسب است؟</span>
-        <span class="faq-toggle">نمایش پاسخ</span>
-      </button>
-      <div class="faq-answer">
-        <p>برای هر نفر تقریباً <b>۱۰۰ تا ۲۰۰ لیتر</b> حجم در نظر بگیرید. برای خانواده ۴ نفره معمولاً مخزن <b>۱۰۰۰ تا ۱۵۰۰ لیتری</b> کافی است.</p>
-      </div>
-    </div>
-    <!-- سوال ۲ -->
-    <div class="faq-item reveal">
-      <button aria-expanded="false" class="faq-question">
-        <span class="q-title">آیا امکان ارسال به شهرستان هم دارید؟</span>
-        <span class="faq-toggle">نمایش پاسخ</span>
-      </button>
-      <div class="faq-answer">
-        <p>بله، ارسال فوری به <b>تهران، پرند، رباط کریم</b> و سراسر کشور با بسته‌بندی مطمئن انجام می‌شود.</p>
-      </div>
-    </div>
-    <!-- سوال ۳ -->
-    <div class="faq-item reveal">
-      <button aria-expanded="false" class="faq-question">
-        <span class="q-title">تفاوت مخزن سه لایه با تک لایه چیست؟</span>
-        <span class="faq-toggle">نمایش پاسخ</span>
-      </button>
-      <div class="faq-answer">
-        <p>مخزن سه‌لایه طبرستان <b>عایق نور</b> است و کاملاً <b>آنتی‌باکتریال و مقاوم در برابر جلبک و تغییر رنگ</b> می‌باشد. مخزن تک‌لایه بیشتر برای مصارف غیرشرب مناسب است.</p>
-      </div>
-    </div>
-  </div>
+<h2 style="color:#1551a1; font-size:1.53rem; text-align:center; font-weight:900; margin-bottom: 25px; letter-spacing: -1px;">
+سوالات پرتکرار درباره مخزن آب طبرستان
+</h2>
+<div class="faq-list">
+<!-- سوال ۱ -->
+<div class="faq-item reveal">
+<button aria-expanded="false" class="faq-question">
+<span class="q-title">چه حجمی برای منزل یا آپارتمان من مناسب است؟</span>
+<span class="faq-toggle">نمایش پاسخ</span>
+</button>
+<div class="faq-answer">
+<p>برای هر نفر تقریباً <b>۱۰۰ تا ۲۰۰ لیتر</b> حجم در نظر بگیرید. برای خانواده ۴ نفره معمولاً مخزن <b>۱۰۰۰ تا ۱۵۰۰ لیتری</b> کافی است.</p>
+</div>
+</div>
+<!-- سوال ۲ -->
+<div class="faq-item reveal">
+<button aria-expanded="false" class="faq-question">
+<span class="q-title">آیا امکان ارسال به شهرستان هم دارید؟</span>
+<span class="faq-toggle">نمایش پاسخ</span>
+</button>
+<div class="faq-answer">
+<p>بله، ارسال فوری به <b>تهران، پرند، رباط کریم</b> و سراسر کشور با بسته‌بندی مطمئن انجام می‌شود.</p>
+</div>
+</div>
+<!-- سوال ۳ -->
+<div class="faq-item reveal">
+<button aria-expanded="false" class="faq-question">
+<span class="q-title">تفاوت مخزن سه لایه با تک لایه چیست؟</span>
+<span class="faq-toggle">نمایش پاسخ</span>
+</button>
+<div class="faq-answer">
+<p>مخزن سه‌لایه طبرستان <b>عایق نور</b> است و کاملاً <b>آنتی‌باکتریال و مقاوم در برابر جلبک و تغییر رنگ</b> می‌باشد. مخزن تک‌لایه بیشتر برای مصارف غیرشرب مناسب است.</p>
+</div>
+</div>
+</div>
 </section>
-
 <style>
-  body { font-family: 'Vazir', Tahoma, Arial, sans-serif; }
-  .main-header h1 { font-size: 2.1rem; }
-  .main-header .lead { font-size: 1.09rem; }
-  #faq {
-    margin: 60px auto 0;
-    padding: 32px 16px;
-    background: #fff;
-    border-radius: 18px;
-    box-shadow: 0 2px 12px #2175d917;
-    max-width: 700px;
-  }
-  #faq h2 {
-    font-size: 1.53rem;
-    font-weight: 900;
-    color: #1551a1;
-    margin-bottom: 25px;
-    letter-spacing: -1px;
-    text-align: center;
-  }
-  .faq-list { margin-top: 5px; }
-  .faq-item { border-bottom: 1.3px solid #e6e6e6; }
-  .faq-question {
-    background: #f3f8ff;
-    color: #1551a1;
-    font-weight: 700;
-    font-size: 1.08rem;
-    padding: 15px 12px 15px 0;
-    border: none;
-    border-radius: 9px;
-    width: 100%;
-    text-align: right;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 13px;
-    box-shadow: 0 2px 8px #d6e4fa21;
-    transition: background 0.17s, box-shadow 0.13s;
-    outline: none;
-    gap: 20px;
-  }
-  .faq-question:focus,
-  .faq-question[aria-expanded="true"] {
-    background: #e6f3ff;
-    box-shadow: 0 2px 11px #b3dcff16;
-  }
-  .q-title { font-weight: 800; font-size: 1em; letter-spacing: -0.3px; }
-  .faq-toggle {
-    background: #23a124;
-    color: #fff;
-    border-radius: 22px;
-    padding: 8px 20px;
-    margin-right: 8px;
-    font-size: .97rem;
-    transition: background 0.14s, color 0.12s;
-    font-weight: bold;
-    border: none;
-    box-shadow: 0 1px 6px #23a1240a;
-  }
-  .faq-question[aria-expanded="true"] .faq-toggle { background: #d62d2d; color: #fff; }
-  .faq-answer {
-    display: none;
-    padding: 13px 13px 4px 0;
-    font-size: 1rem;
-    color: #333;
-    animation: fadeInFaq .35s;
-    line-height: 2;
-  }
-  @keyframes fadeInFaq {
-    0% {opacity: 0; transform: translateY(-10px);}
-    100% {opacity: 1; transform: translateY(0);}
-  }
-  .faq-item.active .faq-answer { display: block; }
-  @media (max-width: 767px) {
-    #faq { padding: 20px 16px; border-radius: 12px; }
-    #faq h2 { font-size: 1.15rem; margin-bottom: 20px; line-height: 1.7; }
-    .faq-question { font-size: 0.95rem; padding: 13px 8px; border-radius: 8px; }
-    .q-title { font-size: 0.95em; }
-    .faq-toggle { font-size: 0.87rem; padding: 6px 16px; border-radius: 18px; }
-    .faq-answer { font-size: 0.93rem; padding: 10px 10px 4px 0; }
-  }
+body { font-family: 'Vazir', Tahoma, Arial, sans-serif; }
+.main-header h1 { font-size: 2.1rem; }
+.main-header .lead { font-size: 1.09rem; }
+#faq {
+margin: 60px auto 0;
+padding: 32px 16px;
+background: #fff;
+border-radius: 18px;
+box-shadow: 0 2px 12px #2175d917;
+max-width: 700px;
+}
+#faq h2 {
+font-size: 1.53rem;
+font-weight: 900;
+color: #1551a1;
+margin-bottom: 25px;
+letter-spacing: -1px;
+text-align: center;
+}
+.faq-list { margin-top: 5px; }
+.faq-item { border-bottom: 1.3px solid #e6e6e6; }
+.faq-question {
+background: #f3f8ff;
+color: #1551a1;
+font-weight: 700;
+font-size: 1.08rem;
+padding: 15px 12px 15px 0;
+border: none;
+border-radius: 9px;
+width: 100%;
+text-align: right;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-top: 13px;
+box-shadow: 0 2px 8px #d6e4fa21;
+transition: background 0.17s, box-shadow 0.13s;
+outline: none;
+gap: 20px;
+}
+.faq-question:focus,
+.faq-question[aria-expanded="true"] {
+background: #e6f3ff;
+box-shadow: 0 2px 11px #b3dcff16;
+}
+.q-title { font-weight: 800; font-size: 1em; letter-spacing: -0.3px; }
+.faq-toggle {
+background: #23a124;
+color: #fff;
+border-radius: 22px;
+padding: 8px 20px;
+margin-right: 8px;
+font-size: .97rem;
+transition: background 0.14s, color 0.12s;
+font-weight: bold;
+border: none;
+box-shadow: 0 1px 6px #23a1240a;
+}
+.faq-question[aria-expanded="true"] .faq-toggle { background: #d62d2d; color: #fff; }
+.faq-answer {
+display: none;
+padding: 13px 13px 4px 0;
+font-size: 1rem;
+color: #333;
+animation: fadeInFaq .35s;
+line-height: 2;
+}
+@keyframes fadeInFaq {
+0% {opacity: 0; transform: translateY(-10px);}
+100% {opacity: 1; transform: translateY(0);}
+}
+.faq-item.active .faq-answer { display: block; }
+@media (max-width: 767px) {
+#faq { padding: 20px 16px; border-radius: 12px; }
+#faq h2 { font-size: 1.15rem; margin-bottom: 20px; line-height: 1.7; }
+.faq-question { font-size: 0.95rem; padding: 13px 8px; border-radius: 8px; }
+.q-title { font-size: 0.95em; }
+.faq-toggle { font-size: 0.87rem; padding: 6px 16px; border-radius: 18px; }
+.faq-answer { font-size: 0.93rem; padding: 10px 10px 4px 0; }
+}
 </style>
-
 <!-- گالری کاتالوگ تصویری با سئوی قوی -->
 <section class="catalog-section" id="catalog-gallery">
-  <h2 class="section-title" style="text-align:center;font-weight:900;margin-bottom:28px;">کاتالوگ تصویری محصولات طبرستان</h2>
-  <div class="catalog-grid">
-    <figure>
-      <img alt="کاتالوگ مخازن عمودی طبرستان" class="catalog-img" height="320" loading="lazy" src="images/vertical-tanks.webp" title="کاتالوگ مخازن عمودی طبرستان | جدول مشخصات و مدل‌ها" width="520"/>
-      <figcaption>مخازن عمودی</figcaption>
-    </figure>
-    <figure>
-      <img alt="کاتالوگ مخازن افقی، بیضی، زیرپله‌ای طبرستان" class="catalog-img" height="320" loading="lazy" src="images/horizontal-oval-understair-tanks.webp" title="کاتالوگ مخازن افقی، بیضی، زیرپله‌ای طبرستان" width="520"/>
-      <figcaption>مخازن افقی، بیضی، زیرپله‌ای</figcaption>
-    </figure>
-    <figure>
-      <img alt="جلد کاتالوگ محصولات طبرستان" class="catalog-img" height="320" loading="lazy" src="images/cover.webp" title="جلد کاتالوگ محصولات طبرستان" width="520"/>
-      <figcaption>جلد کاتالوگ طبرستان</figcaption>
-    </figure>
-    <figure>
-      <img alt="کاتالوگ مخازن انبساط، کلرزنی، استخر طبرستان" class="catalog-img" height="320" loading="lazy" src="images/expansion-chlorination-pools.webp" title="کاتالوگ مخازن انبساط، کلرزنی، استخر طبرستان" width="520"/>
-      <figcaption>مخازن انبساط، کلرزنی و استخرها</figcaption>
-    </figure>
-    <figure>
-      <img alt="کاتالوگ وان و لگن طبرستان" class="catalog-img" height="320" loading="lazy" src="images/tubs.webp" title="کاتالوگ وان و لگن طبرستان" width="520"/>
-      <figcaption>وان و لگن‌ها</figcaption>
-    </figure>
-    <figure>
-      <img alt="کاتالوگ قیفی، مکعبی، نیسانی و آسان‌رو طبرستان" class="catalog-img" height="320" loading="lazy" src="images/funnel-cubic-nissan-doorway-tanks.webp" title="کاتالوگ قیفی، مکعبی، نیسانی و آسان‌رو طبرستان" width="520"/>
-      <figcaption>قیفی، مکعبی، نیسانی، آسان‌رو</figcaption>
-    </figure>
-  </div>
-  <div style="text-align:center;margin-top:32px;">
-    <a class="cta-btn download" href="downloads/tabaristan-catalog-final-highquality.zip" rel="noopener" target="_blank">
-      دانلود کل کاتالوگ محصولات طبرستان (webp، کیفیت بالا)
-    </a>
-  </div>
+<h2 class="section-title" style="text-align:center;font-weight:900;margin-bottom:28px;">کاتالوگ تصویری محصولات طبرستان</h2>
+<div class="catalog-grid">
+<figure>
+<img alt="کاتالوگ مخازن عمودی طبرستان" class="catalog-img" height="320" loading="lazy" src="images/vertical-tanks.webp" title="کاتالوگ مخازن عمودی طبرستان | جدول مشخصات و مدل‌ها" width="520"/>
+<figcaption>مخازن عمودی</figcaption>
+</figure>
+<figure>
+<img alt="کاتالوگ مخازن افقی، بیضی، زیرپله‌ای طبرستان" class="catalog-img" height="320" loading="lazy" src="images/horizontal-oval-understair-tanks.webp" title="کاتالوگ مخازن افقی، بیضی، زیرپله‌ای طبرستان" width="520"/>
+<figcaption>مخازن افقی، بیضی، زیرپله‌ای</figcaption>
+</figure>
+<figure>
+<img alt="جلد کاتالوگ محصولات طبرستان" class="catalog-img" height="320" loading="lazy" src="images/cover.webp" title="جلد کاتالوگ محصولات طبرستان" width="520"/>
+<figcaption>جلد کاتالوگ طبرستان</figcaption>
+</figure>
+<figure>
+<img alt="کاتالوگ مخازن انبساط، کلرزنی، استخر طبرستان" class="catalog-img" height="320" loading="lazy" src="images/expansion-chlorination-pools.webp" title="کاتالوگ مخازن انبساط، کلرزنی، استخر طبرستان" width="520"/>
+<figcaption>مخازن انبساط، کلرزنی و استخرها</figcaption>
+</figure>
+<figure>
+<img alt="کاتالوگ وان و لگن طبرستان" class="catalog-img" height="320" loading="lazy" src="images/tubs.webp" title="کاتالوگ وان و لگن طبرستان" width="520"/>
+<figcaption>وان و لگن‌ها</figcaption>
+</figure>
+<figure>
+<img alt="کاتالوگ قیفی، مکعبی، نیسانی و آسان‌رو طبرستان" class="catalog-img" height="320" loading="lazy" src="images/funnel-cubic-nissan-doorway-tanks.webp" title="کاتالوگ قیفی، مکعبی، نیسانی و آسان‌رو طبرستان" width="520"/>
+<figcaption>قیفی، مکعبی، نیسانی، آسان‌رو</figcaption>
+</figure>
+</div>
 </section>
 </main>
-
 <!-- فوتر مدرن و اعتمادسازی -->
 <footer>
-  <div style="font-size:1.12rem; margin-bottom:6px;">
-    نمایندگی رسمی فروش مخازن آب طبرستان در پرند، رباط کریم و تهران
-  </div>
-  <div style="font-size:.92rem; margin-bottom:13px; opacity:.85;">
-    آدرس: شهرک صنعتی پرند، میدان صنعت، بعد از میدان فناوری، گلزار، گل آذین، پلاک ۲۳، قطعه D85
-  </div>
-  <ul class="social-icons">
-    <li><a href="#" title="اینستاگرام"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.2A6.6 6.6 0 1 0 18.6 12 6.6 6.6 0 0 0 12 5.4zm0 10.9A4.3 4.3 0 1 1 16.3 12 4.3 4.3 0 0 1 12 16.3zm6.9-11.1a1.5 1.5 0 1 1-1.5-1.5 1.5 1.5 0 0 1 1.5 1.5z"/></svg></a></li>
-    <li><a href="https://wa.me/989192389894" rel="noopener" target="_blank" title="واتساپ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.7 14.1c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.1-.2-1.2-1.5-1.2-2.9s.7-2 1-2.3c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1 1 2 1.3 2.3 1.4.3.1.4.1.6-.1l.9-1c.2-.2.4-.2.6-.1l2 1c.2.1.4.2.4.3.1.1.1.5-.1 1.2z"/></svg></a></li>
-    <li><a href="#" title="تلگرام"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.9 4.3 18.8 19c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.4-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.4 12.7 1.6 11.2c-1-.3-1-1 .2-1.5l18.7-7.2c.9-.3 1.6.2 1.4 1.8z"/></svg></a></li>
-  </ul>
-  <div style="font-size:.97rem;">
-    © طراحی و سئو اختصاصی سایت توسط نمایندگی | هرگونه کپی‌برداری پیگرد قانونی دارد<br/>
-    <b>تماس: <a href="tel:09192389894" style="color:#f9f;">09192389894</a></b>
-  </div>
+<div style="font-size:1.12rem; margin-bottom:6px;">
+نمایندگی رسمی فروش مخازن آب طبرستان در پرند، رباط کریم و تهران
+</div>
+<div style="font-size:.92rem; margin-bottom:13px; opacity:.85;">
+آدرس: شهرک صنعتی پرند، میدان صنعت، بعد از میدان فناوری، گلزار، گل آذین، پلاک ۲۳، قطعه D85
+</div>
+<ul class="social-icons">
+<li><a href="#" title="اینستاگرام"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.2A6.6 6.6 0 1 0 18.6 12 6.6 6.6 0 0 0 12 5.4zm0 10.9A4.3 4.3 0 1 1 16.3 12 4.3 4.3 0 0 1 12 16.3zm6.9-11.1a1.5 1.5 0 1 1-1.5-1.5 1.5 1.5 0 0 1 1.5 1.5z"/></svg></a></li>
+<li><a href="https://wa.me/989192389894" rel="noopener" target="_blank" title="واتساپ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.7 14.1c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.1-.2-1.2-1.5-1.2-2.9s.7-2 1-2.3c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.7 1.2 1.6 2 1.1 1 2 1.3 2.3 1.4.3.1.4.1.6-.1l.9-1c.2-.2.4-.2.6-.1l2 1c.2.1.4.2.4.3.1.1.1.5-.1 1.2z"/></svg></a></li>
+<li><a href="#" title="تلگرام"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.9 4.3 18.8 19c-.2 1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.4-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.4 12.7 1.6 11.2c-1-.3-1-1 .2-1.5l18.7-7.2c.9-.3 1.6.2 1.4 1.8z"/></svg></a></li>
+</ul>
+<div style="font-size:.97rem;">
+© طراحی و سئو اختصاصی سایت توسط نمایندگی | هرگونه کپی‌برداری پیگرد قانونی دارد<br/>
+<b>تماس: <a href="tel:09192389894" style="color:#f9f;">09192389894</a></b>
+</div>
 </footer>
-
 <!-- Popup Modal for Images -->
 <div id="catalog-popup">
-  <span id="catalog-popup-close" title="بستن">×</span>
-  <img alt="" id="catalog-popup-img" src=""/>
+<span id="catalog-popup-close" title="بستن">×</span>
+<img alt="" id="catalog-popup-img" src=""/>
 </div>
-
 <!-- WhatsApp Floating Button -->
 <a class="whatsapp-float" href="https://wa.me/989192389894?text=سلام برای خرید مخزن آب طبرستان راهنمایی می‌خواهم" rel="noopener" target="_blank">
-  <img alt="واتساپ" class="whatsapp-icon" decoding="async" height="48" loading="lazy" src="/images/whatsapp-96.webp" width="48"/>
-  <span class="whatsapp-text">مشاوره فوری واتساپ</span>
+<img alt="واتساپ" class="whatsapp-icon" decoding="async" height="48" loading="lazy" src="/images/whatsapp-96.webp" width="48"/>
+<span class="whatsapp-text">مشاوره فوری واتساپ</span>
 </a>
-
 <!-- ✅ لود navbar و فعال‌سازی همبرگر -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("/navbar.html")
-    .then(r => r.text())
-    .then(html => {
-      const container = document.getElementById("navbar-container");
-      container.innerHTML = html;
-
-      const toggle = container.querySelector('.navbar-toggle');
-      const menu = container.querySelector('#main-navbar-collapse');
-      if (toggle && menu) {
-        toggle.addEventListener('click', function () {
-          const open = menu.classList.toggle('in');
-          toggle.classList.toggle('collapsed', !open);
-          toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-        });
-      }
-
-      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-      document.querySelectorAll('#main-navbar-collapse a').forEach(a => {
-        const href = a.getAttribute('href').split('/').pop();
-        if (href === currentPage) {
-          a.parentElement.classList.add('active');
-        }
-      });
-    });
+fetch("/navbar.html")
+.then(r => r.text())
+.then(html => {
+const container = document.getElementById("navbar-container");
+container.innerHTML = html;
+const toggle = container.querySelector('.navbar-toggle');
+const menu = container.querySelector('#main-navbar-collapse');
+if (toggle && menu) {
+toggle.addEventListener('click', function () {
+const open = menu.classList.toggle('in');
+toggle.classList.toggle('collapsed', !open);
+toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+});
+}
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('#main-navbar-collapse a').forEach(a => {
+const href = a.getAttribute('href').split('/').pop();
+if (href === currentPage) {
+a.parentElement.classList.add('active');
+}
+});
+});
 });
 </script>
-
 <!-- پاپ‌آپ کاتالوگ -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll('.catalog-img').forEach(img => {
-    img.addEventListener('click', function () {
-      const popup = document.getElementById('catalog-popup');
-      const popupImg = document.getElementById('catalog-popup-img');
-      popupImg.src = this.src;
-      popupImg.alt = this.alt;
-      popup.style.display = "flex";
-    });
-  });
-  document.getElementById('catalog-popup-close')?.addEventListener('click', () => {
-    document.getElementById('catalog-popup').style.display = "none";
-  });
-  document.getElementById('catalog-popup')?.addEventListener('click', function (e) {
-    if (e.target === this) this.style.display = "none";
-  });
-  document.addEventListener('keydown', function (e) {
-    if (e.key === "Escape") {
-      const popup = document.getElementById('catalog-popup');
-      if (popup) popup.style.display = "none";
-    }
-  });
+document.querySelectorAll('.catalog-img').forEach(img => {
+img.addEventListener('click', function () {
+const popup = document.getElementById('catalog-popup');
+const popupImg = document.getElementById('catalog-popup-img');
+popupImg.src = this.src;
+popupImg.alt = this.alt;
+popup.style.display = "flex";
+});
+});
+document.getElementById('catalog-popup-close')?.addEventListener('click', () => {
+document.getElementById('catalog-popup').style.display = "none";
+});
+document.getElementById('catalog-popup')?.addEventListener('click', function (e) {
+if (e.target === this) this.style.display = "none";
+});
+document.addEventListener('keydown', function (e) {
+if (e.key === "Escape") {
+const popup = document.getElementById('catalog-popup');
+if (popup) popup.style.display = "none";
+}
+});
 });
 </script>
-
 <!-- سوالات پرتکرار -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll('.faq-question').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      const faqItem = btn.parentElement;
-      const isActive = faqItem.classList.contains('active');
-      document.querySelectorAll('.faq-item').forEach(item => {
-        item.classList.remove('active');
-        item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
-        item.querySelector('.faq-toggle').innerText = 'نمایش پاسخ';
-      });
-      if (!isActive) {
-        faqItem.classList.add('active');
-        btn.setAttribute('aria-expanded', 'true');
-        btn.querySelector('.faq-toggle').innerText = 'بستن پاسخ';
-      }
-    });
-  });
+document.querySelectorAll('.faq-question').forEach(function (btn) {
+btn.addEventListener('click', function () {
+const faqItem = btn.parentElement;
+const isActive = faqItem.classList.contains('active');
+document.querySelectorAll('.faq-item').forEach(item => {
+item.classList.remove('active');
+item.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+item.querySelector('.faq-toggle').innerText = 'نمایش پاسخ';
+});
+if (!isActive) {
+faqItem.classList.add('active');
+btn.setAttribute('aria-expanded', 'true');
+btn.querySelector('.faq-toggle').innerText = 'بستن پاسخ';
+}
+});
+});
 });
 </script>
-
 <!-- دکمه واتساپ در موبایل -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const waBtn = document.getElementById('whatsapp-float-btn');
-  if (waBtn && window.matchMedia("(hover: none) and (pointer: coarse)").matches) {
-    waBtn.addEventListener('touchstart', () => waBtn.classList.add('active'));
-    waBtn.addEventListener('touchend', () => setTimeout(() => waBtn.classList.remove('active'), 3500));
-  }
+const waBtn = document.getElementById('whatsapp-float-btn');
+if (waBtn && window.matchMedia("(hover: none) and (pointer: coarse)").matches) {
+waBtn.addEventListener('touchstart', () => waBtn.classList.add('active'));
+waBtn.addEventListener('touchend', () => setTimeout(() => waBtn.classList.remove('active'), 3500));
+}
 });
 </script>
-
 <!-- انیمیشن ورود موقع اسکرول -->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  var targets = document.querySelectorAll('.reveal');
-  if (!('IntersectionObserver' in window) || !targets.length) {
-    targets.forEach(function (el) { el.classList.add('is-visible'); });
-    return;
-  }
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        io.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-  targets.forEach(function (el) { io.observe(el); });
+var targets = document.querySelectorAll('.reveal');
+if (!('IntersectionObserver' in window) || !targets.length) {
+targets.forEach(function (el) { el.classList.add('is-visible'); });
+return;
+}
+var io = new IntersectionObserver(function (entries) {
+entries.forEach(function (entry) {
+if (entry.isIntersecting) {
+entry.target.classList.add('is-visible');
+io.unobserve(entry.target);
+}
+});
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+targets.forEach(function (el) { io.observe(el); });
 });
 </script>
-
 <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-<script defer src="/supabaseClient.js?v=2"></script>
-<script defer src="/js/cart.js?v=2"></script>
+<script defer src="/supabaseClient.js?v=3"></script>
+<script defer src="/js/cart.js?v=3"></script>
 </body>
 </html>
